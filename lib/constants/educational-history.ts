@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import AzadUniversityLogo from "@/assets/logos/college/azad-university-logo.webp";
+import AzadUniversityLogo from "@/public/logos/college/azad-university-logo.webp";
 
 type EducationalHistoryType = {
   logo: StaticImageData;

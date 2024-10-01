@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import DanialAtCafe from "@/assets/images/danial-at-cafe.webp";
-import DanialPlayingBasketball from "@/assets/images/danial-at-basketball.webp";
-import DanialAtShomal from "@/assets/images/danial-at-shomal.webp";
-import DanialFromWorkAtHome from "@/assets/images/danial-from-work-at-home.webp";
+import MotionOpacity from "@/components/ui/motion/opacity";
+import DanialAtCafe from "@/public/images/danial-at-cafe.webp";
+import DanialPlayingBasketball from "@/public/images/danial-at-basketball.webp";
+import DanialAtShomal from "@/public/images/danial-at-shomal.webp";
+import DanialFromWorkAtHome from "@/public/images/danial-from-work-at-home.webp";
 import { Grid, GridItem, Flex, useMediaQuery } from "@chakra-ui/react";
 
 const ImagesGrid = () => {
@@ -28,22 +29,24 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialAtCafe}
-            sizes="(max-width: 768px) 213px, 40vw"
-            alt="Danial Khakbaz at cafe"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-              border: "2.5px solid #3D3D3D",
-              borderTopLeftRadius: 20,
-              borderBottomLeftRadius: isLargerThan768 ? 20 : 0,
-            }}
-          />
+          <MotionOpacity delay={0.5}>
+            <Image
+              src={DanialAtCafe}
+              sizes="(max-width: 768px) 213px, 40vw"
+              alt="Danial Khakbaz at cafe"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+                border: "2.5px solid #3D3D3D",
+                borderTopLeftRadius: 20,
+                borderBottomLeftRadius: isLargerThan768 ? 20 : 0,
+              }}
+            />
+          </MotionOpacity>
         </Flex>
       </GridItem>
       <GridItem
@@ -57,21 +60,23 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialPlayingBasketball}
-            sizes="(max-width: 768px) 450px, 80vw"
-            alt="Danial Khakbaz playing basketball"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: isLargerThan768 ? "45% 0" : "center",
-              border: "2.5px solid #3D3D3D",
-              borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
-            }}
-          />
+          <MotionOpacity delay={1}>
+            <Image
+              src={DanialPlayingBasketball}
+              sizes="(max-width: 768px) 450px, 80vw"
+              alt="Danial Khakbaz playing basketball"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: isLargerThan768 ? "45% 0" : "center",
+                border: "2.5px solid #3D3D3D",
+                borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
+              }}
+            />
+          </MotionOpacity>
         </Flex>
       </GridItem>
       <GridItem
@@ -83,22 +88,24 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialAtShomal}
-            sizes="(max-width: 768px) 450px, 80vw"
-            alt="Danial Khakbaz at the north of Iran"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: isLargerThan768 ? "0 75%" : "center",
-              border: "2.5px solid #3D3D3D",
-              borderTopRightRadius: isLargerThan768 ? 0 : 20,
-              borderBottomRightRadius: isLargerThan768 ? 20 : 0,
-            }}
-          />
+          <MotionOpacity delay={1.5}>
+            <Image
+              src={DanialAtShomal}
+              sizes="(max-width: 768px) 450px, 80vw"
+              alt="Danial Khakbaz at the north of Iran"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: isLargerThan768 ? "0 75%" : "center",
+                border: "2.5px solid #3D3D3D",
+                borderTopRightRadius: isLargerThan768 ? 0 : 20,
+                borderBottomRightRadius: isLargerThan768 ? 20 : 0,
+              }}
+            />
+          </MotionOpacity>
         </Flex>
       </GridItem>
       <GridItem
@@ -110,22 +117,24 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialFromWorkAtHome}
-            sizes="(max-width: 768px) 213px, 40vw"
-            alt="Danial Khakbaz working from home"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-              border: "2.5px solid #3D3D3D",
-              borderTopRightRadius: isLargerThan768 ? 20 : 0,
-              borderBottomRightRadius: isLargerThan768 ? 0 : 20,
-            }}
-          />
+          <MotionOpacity delay={2}>
+            <Image
+              src={DanialFromWorkAtHome}
+              sizes="(max-width: 768px) 213px, 40vw"
+              alt="Danial Khakbaz working from home"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+                border: "2.5px solid #3D3D3D",
+                borderTopRightRadius: isLargerThan768 ? 20 : 0,
+                borderBottomRightRadius: isLargerThan768 ? 0 : 20,
+              }}
+            />
+          </MotionOpacity>
         </Flex>
       </GridItem>
     </Grid>

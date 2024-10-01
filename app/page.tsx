@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+import MotionOpacity from "@/components/ui/motion/opacity";
 import ImagesGrid from "@/components/layouts/home/images-grid";
 import FavQuote from "@/components/layouts/home/fav-quote";
 import Summary from "@/components/layouts/home/summary";
@@ -9,18 +11,33 @@ import Education from "@/components/layouts/home/education";
 import Socials from "@/components/layouts/home/socials";
 import { Flex } from "@chakra-ui/react";
 
+const MOTION_COMPONENT_DELAY = 0.5;
+
+type HomePageItemsType = ReactNode;
+
+const HomePageItems: HomePageItemsType[] = [
+  <ImagesGrid />,
+  <FavQuote />,
+  <Summary />,
+  <About />,
+  <Bio />,
+  <MainTechs />,
+  <Interests />,
+  <Education />,
+  <Socials />,
+];
+
 const HomePage = async () => {
   return (
     <Flex flexDirection="column" gap={6}>
-      <ImagesGrid />
-      <FavQuote />
-      <Summary />
-      <About />
-      <Bio />
-      <MainTechs />
-      <Interests />
-      <Education />
-      <Socials />
+      {HomePageItems.map((component, index) => (
+        <MotionOpacity
+          key={MOTION_COMPONENT_DELAY * index}
+          delay={MOTION_COMPONENT_DELAY * (index + 1)}
+        >
+          {component}
+        </MotionOpacity>
+      ))}
     </Flex>
   );
 };
