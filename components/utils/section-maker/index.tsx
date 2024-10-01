@@ -6,7 +6,7 @@ type SectionMakerProps = {
   children: ReactNode;
 };
 
-const SectionMaker = async ({ label, children }: SectionMakerProps) => {
+export const SectionMaker = async ({ label, children }: SectionMakerProps) => {
   return (
     <Flex flexDirection="column" gap={2}>
       <Text
@@ -21,5 +21,3 @@ const SectionMaker = async ({ label, children }: SectionMakerProps) => {
     </Flex>
   );
 };
-
-export default SectionMaker;

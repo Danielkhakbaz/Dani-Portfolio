@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import MotionOpacity from "@/components/ui/motion/opacity";
+import { MotionOpacity } from "@/components/utils/motion/opacity";
 import DanialAtCafe from "@/public/images/danial-at-cafe.webp";
 import DanialPlayingBasketball from "@/public/images/danial-at-basketball.webp";
 import DanialAtShomal from "@/public/images/danial-at-shomal.webp";

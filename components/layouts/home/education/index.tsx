@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Image from "next/image";
-import SectionMaker from "@/components/ui/section-maker";
+import { SectionMaker } from "@/components/utils/section-maker";
 import { educationalHistory } from "@/lib/constants/educational-history";
 import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 

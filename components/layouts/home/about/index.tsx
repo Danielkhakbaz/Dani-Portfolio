@@ -1,6 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import SectionMaker from "@/components/ui/section-maker";
+import { SectionMaker } from "@/components/utils/section-maker";
 import { Flex, Text, Button } from "@chakra-ui/react";
 import { FaAngleRight } from "react-icons/fa6";
 

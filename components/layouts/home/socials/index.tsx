@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import SectionMaker from "@/components/ui/section-maker";
+import { SectionMaker } from "@/components/utils/section-maker";
 import { socials } from "@/lib/constants/socials";
 import { Flex, Link } from "@chakra-ui/react";
 

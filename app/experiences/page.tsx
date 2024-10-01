@@ -1,5 +1,28 @@
+import type { Metadata } from "next";
+import Skills from "@/components/layouts/experiences/skills";
+import Experiences from "@/components/layouts/experiences/experiences";
+import { MotionOpacity } from "@/components/utils/motion/opacity";
+import { Flex, Heading, Divider } from "@chakra-ui/react";
+
+export const metadata: Metadata = {
+  title: "Danial Khakbaz | Experiences",
+  description:
+    "Here's the part that I show the stuff I learnt and the places I'd worked throughout these years.",
+};
+
 const ExperiencesPage = async () => {
-  return <></>;
+  return (
+    <Flex flexDirection="column" gap={8}>
+      <MotionOpacity delay={0.5}>
+        <Heading>Skills & Experinces</Heading>
+      </MotionOpacity>
+      <Flex flexDirection="column" gap={8}>
+        <Skills />
+        <Divider borderWidth={2} borderColor="#393939" />
+        <Experiences />
+      </Flex>
+    </Flex>
+  );
 };
 
 export default ExperiencesPage;

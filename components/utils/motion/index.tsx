@@ -10,7 +10,7 @@ type MotionComponentProps = {
   [key: string]: unknown;
 };
 
-const MotionComponent = ({
+export const MotionComponent = ({
   tag,
   className,
   children,
@@ -26,5 +26,3 @@ const MotionComponent = ({
     </LazyMotion>
   );
 };
-
-export default MotionComponent;

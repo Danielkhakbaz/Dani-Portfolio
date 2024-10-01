@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import MotionComponent from "@/components/ui/motion";
+import { MotionComponent } from "@/components/utils/motion";
 import { useMediaQuery } from "@chakra-ui/react";
 
 type MotionOpacityProps = {
@@ -9,7 +9,7 @@ type MotionOpacityProps = {
   children: ReactNode;
 };
 
-const MotionOpacity = ({ delay, children }: MotionOpacityProps) => {
+export const MotionOpacity = ({ delay, children }: MotionOpacityProps) => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
 
   if (isLargerThan768) {
@@ -27,5 +27,3 @@ const MotionOpacity = ({ delay, children }: MotionOpacityProps) => {
     return children;
   }
 };
-
-export default MotionOpacity;

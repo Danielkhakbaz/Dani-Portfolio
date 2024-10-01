@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import MotionOpacity from "@/components/ui/motion/opacity";
+import { MotionOpacity } from "@/components/utils/motion/opacity";
 import { Flex, Text, Box } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 

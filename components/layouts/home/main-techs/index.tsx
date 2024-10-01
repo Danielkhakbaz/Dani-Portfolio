@@ -1,5 +1,5 @@
-import SectionMaker from "@/components/ui/section-maker";
 import Icon from "@/components/layouts/home/main-techs/icon";
+import { SectionMaker } from "@/components/utils/section-maker";
 import { mainTechs } from "@/lib/constants/main-techs";
 import { Grid, GridItem } from "@chakra-ui/react";
 

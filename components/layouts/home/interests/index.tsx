@@ -1,4 +1,4 @@
-import SectionMaker from "@/components/ui/section-maker";
+import { SectionMaker } from "@/components/utils/section-maker";
 import { Flex, Tooltip, Text, Badge } from "@chakra-ui/react";
 
 const Interests = async () => {

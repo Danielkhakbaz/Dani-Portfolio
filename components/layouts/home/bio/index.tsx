@@ -1,4 +1,4 @@
-import SectionMaker from "@/components/ui/section-maker";
+import { SectionMaker } from "@/components/utils/section-maker";
 import { bioSections } from "@/lib/constants/bio";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
