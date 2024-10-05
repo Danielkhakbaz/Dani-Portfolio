@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MotionOpacity } from "@/components/utils/motion/opacity";
 import DanialAtCafe from "@/public/images/danial-at-cafe.webp";
-import DanialPlayingBasketball from "@/public/images/danial-at-basketball.webp";
+import DanialWhileRunning from "@/public/images/danial-while-running.webp";
 import DanialAtShomal from "@/public/images/danial-at-shomal.webp";
 import DanialFromWorkAtHome from "@/public/images/danial-from-work-at-home.webp";
 import { Grid, GridItem, Flex, useMediaQuery } from "@chakra-ui/react";
@@ -62,7 +62,7 @@ const ImagesGrid = () => {
         >
           <MotionOpacity delay={1}>
             <Image
-              src={DanialPlayingBasketball}
+              src={DanialWhileRunning}
               sizes="(max-width: 768px) 450px, 80vw"
               alt="Danial Khakbaz playing basketball"
               fill
@@ -71,7 +71,7 @@ const ImagesGrid = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                objectPosition: isLargerThan768 ? "45% 0" : "center",
+                objectPosition: "bottom",
                 border: "2.5px solid #3D3D3D",
                 borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
               }}
