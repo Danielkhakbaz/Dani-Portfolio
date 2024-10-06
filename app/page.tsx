@@ -13,9 +13,7 @@ import { Flex } from "@chakra-ui/react";
 
 const MOTION_COMPONENT_DELAY = 0.5;
 
-type HomePageItemsType = ReactNode;
-
-const HomePageItems: HomePageItemsType[] = [
+const HomePageItems: ReactNode[] = [
   <ImagesGrid />,
   <FavQuote />,
   <Summary />,
