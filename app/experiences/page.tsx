@@ -18,7 +18,9 @@ const ExperiencesPage = async () => {
       </MotionOpacity>
       <Flex flexDirection="column" gap={8}>
         <Skills />
-        <Divider borderWidth={2} borderColor="#393939" />
+        <MotionOpacity delay={0.5}>
+          <Divider borderWidth={2} borderColor="#393939" />
+        </MotionOpacity>
         <Experiences />
       </Flex>
     </Flex>
