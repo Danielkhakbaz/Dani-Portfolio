@@ -2,11 +2,15 @@
 
 import { useState } from "react";
 import ProjectCard from "@/components/layouts/projects/card";
-import ProjectDrawer from "@/components/layouts/projects/drawer";
 import { MotionOpacity } from "@/components/utils/motion/opacity";
 import { projects } from "@/lib/constants/projects";
 import { ProjectsType } from "@/types/projects";
 import { Flex, Heading, Grid, useDisclosure } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+
+const ProjectDrawer = dynamic(
+  () => import("@/components/layouts/projects/drawer")
+);
 
 const MOTION_COMPONENT_DELAY = 0.25;
 
