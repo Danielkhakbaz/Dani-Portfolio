@@ -1,6 +1,6 @@
 "use client";
 
-import NextLink from "next/link";
+import { Link as NextLink } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { menuItems } from "@/lib/constants/menu";
 import {

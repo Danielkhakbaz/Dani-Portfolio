@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { Flex, Heading, Code, Text, Button } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowRotateLeft } from "react-icons/fa6";

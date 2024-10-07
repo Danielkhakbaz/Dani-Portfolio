@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import dynamic from "next/dynamic";
 import { SectionMaker } from "@/components/utils/section-maker";
 import { Flex, Text, Button } from "@chakra-ui/react";

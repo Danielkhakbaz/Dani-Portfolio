@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { Flex, Heading, Button } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
 

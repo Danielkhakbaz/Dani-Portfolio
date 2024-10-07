@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import { Link as NextLink } from "next-view-transitions";
 import Logo from "@/components/ui/navbar/logo";
 import { WebMenu, MobileMenu } from "@/components/ui/navbar/menu";
 import { Container, Flex, Link } from "@chakra-ui/react";

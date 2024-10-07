@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/ui/scroll-to-top";
 import Availability from "@/components/ui/availability";
 import { ChakraProvider } from "@/lib/providers/chakra";
 import { LatoFont } from "@/styles/font";
+import { ViewTransitions } from "next-view-transitions";
 import { Container } from "@chakra-ui/react";
 import "@/styles/globals.css";
 
@@ -38,19 +39,21 @@ type RootLayoutProps = {
 
 const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
-    <html lang="en">
-      <body className={LatoFont.className}>
-        <ChakraProvider>
-          <Navbar />
-          <Container maxWidth="container.sm" minHeight="80vh" paddingY={6}>
-            {children}
-          </Container>
-          <Footer />
-          <ScrollToTop />
-          <Availability />
-        </ChakraProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body className={LatoFont.className}>
+          <ChakraProvider>
+            <Navbar />
+            <Container maxWidth="container.sm" minHeight="80vh" paddingY={6}>
+              {children}
+            </Container>
+            <Footer />
+            <ScrollToTop />
+            <Availability />
+          </ChakraProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 };
 

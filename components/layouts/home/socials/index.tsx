@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import { Link as NextLink } from "next-view-transitions";
 import { SectionMaker } from "@/components/utils/section-maker";
 import { socials } from "@/lib/constants/socials";
 import { Flex, Link } from "@chakra-ui/react";
