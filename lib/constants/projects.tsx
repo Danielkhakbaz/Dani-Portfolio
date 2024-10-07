@@ -1,4 +1,3 @@
-import { Link as NextLink } from "next-view-transitions";
 import { Link, Flex, Badge } from "@chakra-ui/react";
 import { poweredBy } from "@/lib/constants/powered-by";
 import { stacks } from "@/lib/constants/stacks";
@@ -26,8 +25,6 @@ export const projects: ProjectsType[] = [
         label: "Website",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://danieloo.vercel.app"
             target="_blank"
             style={{
@@ -47,8 +44,6 @@ export const projects: ProjectsType[] = [
         label: "Github",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/Danial-Portfolio"
             target="_blank"
             style={{
@@ -117,8 +112,6 @@ export const projects: ProjectsType[] = [
         label: "Website",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://danial-notes-app.vercel.app"
             target="_blank"
             style={{
@@ -138,8 +131,6 @@ export const projects: ProjectsType[] = [
         label: "Github",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/Notes-App"
             target="_blank"
             style={{
@@ -206,8 +197,6 @@ export const projects: ProjectsType[] = [
         label: "Website",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://the-film-inventory.vercel.app"
             target="_blank"
             style={{
@@ -227,8 +216,6 @@ export const projects: ProjectsType[] = [
         label: "Github",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/The-Film-Inventory"
             target="_blank"
             style={{
@@ -297,8 +284,6 @@ export const projects: ProjectsType[] = [
         label: "Website",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://danial-links.vercel.app"
             target="_blank"
             style={{
@@ -318,8 +303,6 @@ export const projects: ProjectsType[] = [
         label: "Github",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/links"
             target="_blank"
             style={{
@@ -383,8 +366,6 @@ export const projects: ProjectsType[] = [
         label: "Website",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://software-agency-website.vercel.app"
             target="_blank"
             style={{
@@ -404,8 +385,6 @@ export const projects: ProjectsType[] = [
         label: "Github",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/Software-Agency-Website"
             target="_blank"
             style={{
@@ -461,8 +440,6 @@ export const projects: ProjectsType[] = [
         label: "Website",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://www.npmjs.com/package/@danielkhakbaz/use-shared"
             target="_blank"
             style={{
@@ -482,8 +459,6 @@ export const projects: ProjectsType[] = [
         label: "Github",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/use-shared"
             target="_blank"
             style={{
@@ -539,8 +514,6 @@ export const projects: ProjectsType[] = [
         label: "Website",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/Emoji-todo"
             target="_blank"
             style={{
@@ -560,8 +533,6 @@ export const projects: ProjectsType[] = [
         label: "Github",
         component: (
           <Link
-            as={NextLink}
-            isExternal
             href="https://github.com/Danielkhakbaz/Emoji-todo"
             target="_blank"
             style={{

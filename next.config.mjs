@@ -1,4 +1,7 @@
+import createMDX from "@next/mdx";
+
 const nextConfig = {
+  pageExtensions: ["mdx", "ts", "tsx"],
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -10,4 +13,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);

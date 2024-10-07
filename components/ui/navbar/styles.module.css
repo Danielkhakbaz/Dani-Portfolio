@@ -1,0 +1,9 @@
+.logo__link {
+  width: fit-content;
+  transition: 0.4s;
+  border-radius: 4;
+  padding: 2 0.5;
+}
+.logo__link:hover {
+  transform: scale(1.1);
+}

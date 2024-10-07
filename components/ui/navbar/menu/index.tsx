@@ -1,10 +1,9 @@
 "use client";
 
-import { Link as NextLink } from "next-view-transitions";
+import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { menuItems } from "@/lib/constants/menu";
 import {
-  Link,
   Flex,
   Menu,
   MenuButton,
@@ -14,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { motion } from "framer-motion";
+import styles from "@/components/ui/navbar/menu/styles.module.css";
 
 export const WebMenu = () => {
   const path = usePathname();
@@ -24,14 +24,7 @@ export const WebMenu = () => {
         const isActive = path === href || path.startsWith(`${href}/`);
 
         return (
-          <Link
-            as={NextLink}
-            key={label}
-            href={href}
-            display="flex"
-            flexDirection="column"
-            _hover={{ textDecoration: "none" }}
-          >
+          <Link key={label} href={href} className={styles.menuItems__link}>
             <Flex
               alignItems="center"
               transition="color 0.1s ease-in-out"
@@ -84,19 +77,18 @@ export const MobileMenu = () => {
           const isActive = path === href || path.startsWith(`${href}/`);
 
           return (
-            <MenuItem
-              key={label}
-              as={NextLink}
-              href={href}
-              icon={mobileIcon}
-              backgroundColor="black"
-              color={isActive ? "#28AABC" : "#FFF"}
-              _hover={{
-                color: "#28AABC",
-              }}
-            >
-              {label}
-            </MenuItem>
+            <Link key={label} href={href}>
+              <MenuItem
+                icon={mobileIcon}
+                backgroundColor="black"
+                color={isActive ? "#28AABC" : "#FFF"}
+                _hover={{
+                  color: "#28AABC",
+                }}
+              >
+                {label}
+              </MenuItem>
+            </Link>
           );
         })}
       </MenuList>

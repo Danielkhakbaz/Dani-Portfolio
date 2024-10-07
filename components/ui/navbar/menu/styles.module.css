@@ -1,0 +1,7 @@
+.menuItems__link {
+  display: flex;
+  flex-direction: column;
+}
+.menuItems__link:hover {
+  text-decoration: none;
+}
