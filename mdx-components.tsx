@@ -1,7 +1,21 @@
 import React, { ComponentPropsWithoutRef } from "react";
-import { Link } from "next-view-transitions";
-import type { MDXComponents } from "mdx/types";
 import { highlight } from "sugar-high";
+import type { MDXComponents } from "mdx/types";
+import {
+  Heading,
+  Text,
+  List,
+  ListItem,
+  Link,
+  Code,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  chakra,
+} from "@chakra-ui/react";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -12,86 +26,91 @@ type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
 const components: MDXComponents = {
   h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0 fade-in" {...props} />
+    <Heading
+      as="h1"
+      className="fade-in"
+      size="xl"
+      fontWeight="bold"
+      marginY={4}
+      {...props}
+    />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
+    <Heading as="h2" size="lg" fontWeight="bold" marginY={4} {...props} />
   ),
   h3: (props: HeadingProps) => (
-    <h3 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
+    <Heading as="h3" size="md" fontWeight="bold" marginY={4} {...props} />
   ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
-  p: (props: ParagraphProps) => (
-    <p className="text-gray-800 leading-snug" {...props} />
+  h4: (props: HeadingProps) => (
+    <Heading as="h4" size="sm" fontWeight="bold" {...props} />
   ),
+  p: (props: ParagraphProps) => <Text lineHeight="tall" {...props} />,
   ol: (props: ListProps) => (
-    <ol className="text-gray-800 list-decimal pl-5 space-y-2" {...props} />
+    <List as="ol" styleType="decimal" paddingLeft={5} spacing={2} {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className="text-gray-800 list-disc pl-5 space-y-1" {...props} />
+    <List as="ul" styleType="disc" paddingLeft={5} spacing={1} {...props} />
   ),
-  li: (props: ListItemProps) => <li className="pl-1" {...props} />,
+  li: (props: ListItemProps) => <ListItem paddingLeft={1} {...props} />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
-    <em className="font-medium" {...props} />
+    <Text as="em" fontWeight="bold" {...props} />
   ),
   strong: (props: ComponentPropsWithoutRef<"strong">) => (
-    <strong className="font-medium" {...props} />
+    <Text as="strong" fontWeight="bold" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className = "text-blue-500 hover:text-blue-700";
+    const className = { color: "blue.400", _hover: { color: "blue.600" } };
+
     if (href?.startsWith("/")) {
       return (
-        <Link href={href} className={className} {...props}>
+        <Link href={href} {...className} {...props}>
           {children}
         </Link>
       );
     }
-    if (href?.startsWith("#")) {
-      return (
-        <a href={href} className={className} {...props}>
-          {children}
-        </a>
-      );
-    }
     return (
-      <a
+      <Link
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
+        isExternal={!href?.startsWith("#")}
+        {...className}
         {...props}
       >
         {children}
-      </a>
+      </Link>
     );
   },
   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
     const codeHTML = highlight(children as string);
-    return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+
+    return <Code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
   },
   Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
-    <table>
-      <thead>
-        <tr>
+    <Table variant="simpaddingLefte">
+      <Thead>
+        <Tr>
           {data.headers.map((header, index) => (
-            <th key={index}>{header}</th>
+            <Th key={index}>{header}</Th>
           ))}
-        </tr>
-      </thead>
-      <tbody>
+        </Tr>
+      </Thead>
+      <Tbody>
         {data.rows.map((row, index) => (
-          <tr key={index}>
+          <Tr key={index}>
             {row.map((cell, cellIndex) => (
-              <td key={cellIndex}>{cell}</td>
+              <Td key={cellIndex}>{cell}</Td>
             ))}
-          </tr>
+          </Tr>
         ))}
-      </tbody>
-    </table>
+      </Tbody>
+    </Table>
   ),
   blockquote: (props: BlockquoteProps) => (
-    <blockquote
-      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700"
+    <chakra.blockquote
+      color="gray.700"
+      borderLeft="3px solid"
+      borderColor="gray.300"
+      paddingLeft={4}
+      marginLeft="0.075em"
       {...props}
     />
   ),

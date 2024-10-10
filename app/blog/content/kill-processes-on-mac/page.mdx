@@ -1,0 +1,41 @@
+import Image from "next/image";
+import BlogNav from "@/components/layouts/blog/nav";
+import { Box } from "@chakra-ui/react";
+
+export const metadata = {
+  title: "Kill processes on Mac",
+  alternates: {
+    canonical: "/blog/kill-processes-on-mac",
+  },
+};
+
+<BlogNav date="February 13, 2024" neededTime={1}>
+  # How to kill process on MacOS
+
+  <Image
+    width="2000"
+    height="100"
+    src="/images/blog/kill-processes-on-mac.webp"
+    alt="Kill processes on Mac's Image"
+    style={{
+      marginBottom: 8,
+    }}
+  />
+</BlogNav>
+
+1. You can try `netstat`
+   `netstat -vanp tcp | grep 3000`
+
+2. For **macOS El Capitan** and newer (or if your netstat
+   doesn&apos;t support `-p`), use `lsof`
+   `lsof -i tcp:3000`
+
+<Box marginY={4}>
+
+---
+
+</Box>
+
+## Sources
+
+- [Stack Overflow](https://stackoverflow.com/questions/3855127/find-and-kill-process-locking-port-3000-on-mac)

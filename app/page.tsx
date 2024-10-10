@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Link } from "next-view-transitions";
 import ImagesGrid from "@/components/layouts/home/images-grid";
 import FavQuote from "@/components/layouts/home/fav-quote";
 import Summary from "@/components/layouts/home/summary";
@@ -29,7 +28,6 @@ const HomePageItems: ReactNode[] = [
 const HomePage = async () => {
   return (
     <Flex flexDirection="column" gap={6}>
-      <Link href="/b/danial">Danial's Blog</Link>
       {HomePageItems.map((component, index) => (
         <MotionOpacity
           key={MOTION_COMPONENT_DELAY * index}

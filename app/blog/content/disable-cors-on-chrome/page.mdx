@@ -1,0 +1,67 @@
+import Image from "next/image";
+import BlogNav from "@/components/layouts/blog/nav";
+import { Box } from "@chakra-ui/react";
+
+export const metadata = {
+  title: "Disable CORS on Chrome",
+  alternates: {
+    canonical: "/blog/disable-cors-on-chrome",
+  },
+};
+
+<BlogNav date="February 11, 2024" neededTime={2}>
+  # Disable CORS on Chrome
+
+  <Image
+    width="2000"
+    height="100"
+    src="/images/blog/disable-cors-on-chrome.webp"
+    alt="Disable CORS on Chrome's Image"
+    style={{
+      marginBottom: 8,
+    }}
+  />
+</BlogNav>
+
+As of Chrome 95, on MacOS and Windows, `--disable-site-isolation-trials` remains a required flag
+in order to disable web security, so the command-line arguments to
+Chrome seen below are still valid. (Some of the arguments are not
+formally supported by Chrome, as it will warn you.) To test whether
+you&apos;ve successfully launched Chrome with web security disabled,
+run the snippet in Web Security Test at the bottom of this post.
+
+## The Solution
+
+As of Chrome 81, it is mandatory to pass both `--disable-site-isolation-trials` and a non-empty profile
+path via `--user-data-dir` in order for `--disable-web-security` to take effect:
+
+<Box marginBottom={4}>
+### MacOS (in Terminal)
+
+`open -na Google\ Chrome --args
+  --user-data-dir=/tmp/temporary-chrome-profile-dir --disable-web-security
+  --disable-site-isolation-trials`
+
+</Box>
+
+<Box marginBottom={4}>
+### Windows (from &quot;Run&quot; dialog [Windows+R] or start menu in Windows 8+)
+
+`chrome.exe --user-data-dir=\temporary-chrome-profile-dir
+            --disable-web-security --disable-site-isolation-trials`
+
+</Box>
+
+It is likely that Chrome requires a non-empty profile
+path to mitigate the high security risk of launching the browser with
+web security disabled on the default profile. See `--user-data-dir=` vs `--user-data-dir=/some/path` for more details below.
+
+<Box marginY={4}>
+
+---
+
+</Box>
+
+## Sources
+
+- [Stack Overflow](https://stackoverflow.com/questions/35432749/disable-web-security-in-chrome-48)
