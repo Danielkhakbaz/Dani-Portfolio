@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { MotionOpacity } from "@/components/utils/motion/opacity";
+import { FadeUp } from "@/components/utils/fade-up";
 import DanialAtCafe from "@/public/images/danial-at-cafe.webp";
 import DanialWhileRunning from "@/public/images/danial-while-running.webp";
 import DanialAtShomal from "@/public/images/danial-at-shomal.webp";
 import DanialFromWorkAtHome from "@/public/images/danial-from-work-at-home.webp";
 import { Grid, GridItem, Flex, useMediaQuery } from "@chakra-ui/react";
+
+const MOTION_COMPONENT_DELAY = 0.5;
 
 const ImagesGrid = () => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
@@ -29,7 +31,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <MotionOpacity delay={0.5}>
+          <FadeUp delay={MOTION_COMPONENT_DELAY * 1}>
             <Image
               src={DanialAtCafe}
               sizes="(max-width: 768px) 213px, 40vw"
@@ -46,7 +48,7 @@ const ImagesGrid = () => {
                 borderBottomLeftRadius: isLargerThan768 ? 20 : 0,
               }}
             />
-          </MotionOpacity>
+          </FadeUp>
         </Flex>
       </GridItem>
       <GridItem
@@ -60,7 +62,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <MotionOpacity delay={1}>
+          <FadeUp delay={MOTION_COMPONENT_DELAY * 2}>
             <Image
               src={DanialWhileRunning}
               sizes="(max-width: 768px) 450px, 80vw"
@@ -76,7 +78,7 @@ const ImagesGrid = () => {
                 borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
               }}
             />
-          </MotionOpacity>
+          </FadeUp>
         </Flex>
       </GridItem>
       <GridItem
@@ -88,7 +90,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <MotionOpacity delay={1.5}>
+          <FadeUp delay={MOTION_COMPONENT_DELAY * 3}>
             <Image
               src={DanialAtShomal}
               sizes="(max-width: 768px) 450px, 80vw"
@@ -105,7 +107,7 @@ const ImagesGrid = () => {
                 borderBottomRightRadius: isLargerThan768 ? 20 : 0,
               }}
             />
-          </MotionOpacity>
+          </FadeUp>
         </Flex>
       </GridItem>
       <GridItem
@@ -117,7 +119,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <MotionOpacity delay={2}>
+          <FadeUp delay={MOTION_COMPONENT_DELAY * 4}>
             <Image
               src={DanialFromWorkAtHome}
               sizes="(max-width: 768px) 213px, 40vw"
@@ -134,7 +136,7 @@ const ImagesGrid = () => {
                 borderBottomRightRadius: isLargerThan768 ? 0 : 20,
               }}
             />
-          </MotionOpacity>
+          </FadeUp>
         </Flex>
       </GridItem>
     </Grid>

@@ -8,7 +8,7 @@ import MainTechs from "@/components/layouts/home/main-techs";
 import Interests from "@/components/layouts/home/interests";
 import Education from "@/components/layouts/home/education";
 import Socials from "@/components/layouts/home/socials";
-import { MotionOpacity } from "@/components/utils/motion/opacity";
+import { FadeUp } from "@/components/utils/fade-up";
 import { Flex } from "@chakra-ui/react";
 
 const MOTION_COMPONENT_DELAY = 0.5;
@@ -29,12 +29,12 @@ const HomePage = async () => {
   return (
     <Flex flexDirection="column" gap={6}>
       {HomePageItems.map((component, index) => (
-        <MotionOpacity
+        <FadeUp
           key={MOTION_COMPONENT_DELAY * index}
-          delay={MOTION_COMPONENT_DELAY * (index + 1)}
+          delay={MOTION_COMPONENT_DELAY}
         >
           {component}
-        </MotionOpacity>
+        </FadeUp>
       ))}
     </Flex>
   );

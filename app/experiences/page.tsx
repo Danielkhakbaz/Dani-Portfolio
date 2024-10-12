@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Skills from "@/components/layouts/experiences/skills";
 import Experiences from "@/components/layouts/experiences/experiences";
-import { MotionOpacity } from "@/components/utils/motion/opacity";
+import { FadeUp } from "@/components/utils/fade-up";
 import { Flex, Heading, Divider } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 const ExperiencesPage = async () => {
   return (
     <Flex flexDirection="column" gap={8}>
-      <MotionOpacity delay={0.5}>
+      <FadeUp delay={0.5}>
         <Heading>Skills & Experinces</Heading>
-      </MotionOpacity>
+      </FadeUp>
       <Flex flexDirection="column" gap={8}>
         <Skills />
-        <MotionOpacity delay={0.5}>
+        <FadeUp delay={0.5}>
           <Divider borderWidth={2} borderColor="#393939" />
-        </MotionOpacity>
+        </FadeUp>
         <Experiences />
       </Flex>
     </Flex>

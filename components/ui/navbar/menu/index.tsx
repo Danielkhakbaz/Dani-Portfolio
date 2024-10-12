@@ -12,7 +12,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import styles from "@/components/ui/navbar/menu/styles.module.css";
 
 export const WebMenu = () => {
@@ -35,7 +35,7 @@ export const WebMenu = () => {
               {label}
             </Flex>
             {isActive && (
-              <motion.span
+              <m.span
                 layoutId="active"
                 style={{
                   width: "100%",

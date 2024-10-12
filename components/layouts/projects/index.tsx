@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import ProjectCard from "@/components/layouts/projects/card";
-import { MotionOpacity } from "@/components/utils/motion/opacity";
+import { FadeUp } from "@/components/utils/fade-up";
 import { projects } from "@/lib/constants/projects";
 import { ProjectsType } from "@/types/projects";
 import { Flex, Heading, Grid, useDisclosure } from "@chakra-ui/react";
@@ -22,9 +22,11 @@ const Projects = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const selectProject = (id: string) => {
-    const theProject = projects.filter((project) => project.title === id)[0];
+    const selectedProject = projects.filter(
+      (project) => project.title === id
+    )[0];
 
-    setSelectedProject(theProject);
+    setSelectedProject(selectedProject);
 
     onOpen();
   };
@@ -38,9 +40,9 @@ const Projects = () => {
         transitionDuration=".2s"
         gap={6}
       >
-        <MotionOpacity delay={0.25}>
+        <FadeUp>
           <Heading>Projects</Heading>
-        </MotionOpacity>
+        </FadeUp>
         <Grid
           minHeight={{ base: "1800px", md: "900px" }}
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
@@ -51,14 +53,14 @@ const Projects = () => {
               key={MOTION_COMPONENT_DELAY * index}
               onClick={() => selectProject(project.title)}
             >
-              <MotionOpacity delay={MOTION_COMPONENT_DELAY * (index + 1)}>
+              <FadeUp delay={MOTION_COMPONENT_DELAY}>
                 <ProjectCard
                   imageSrc={project.images[project.icon].src}
                   alt={project.images[0].alt}
                   title={project.title}
                   description={project.description}
                 />
-              </MotionOpacity>
+              </FadeUp>
             </div>
           ))}
         </Grid>

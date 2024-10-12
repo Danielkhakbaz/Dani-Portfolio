@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "next-view-transitions";
-import { MotionOpacity } from "@/components/utils/motion/opacity";
+import { FadeUp } from "@/components/utils/fade-up";
 import { Flex, Text, Box } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 
@@ -22,7 +22,7 @@ const pulse = keyframes`
 
 const Availability = () => {
   return (
-    <MotionOpacity delay={1}>
+    <FadeUp delay={0.5}>
       <Flex
         as={Link}
         href="#links"
@@ -64,7 +64,7 @@ const Availability = () => {
           Available for new projects
         </Text>
       </Flex>
-    </MotionOpacity>
+    </FadeUp>
   );
 };
 
