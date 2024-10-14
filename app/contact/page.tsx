@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useState, useRef, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import { FadeUp } from "@/components/utils/fade-up";
 import {
@@ -9,25 +9,33 @@ import {
   Code,
   FormControl,
   FormLabel,
-  Input,
   FormHelperText,
+  Input,
   Textarea,
   Button,
+  Spinner,
   useToast,
 } from "@chakra-ui/react";
 
 const ContactPage = () => {
-  const form = useRef<any>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isFormValid, setIsFormValid] = useState<boolean>(false);
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const toast = useToast();
 
-  const sendEmail = async (e: any) => {
+  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log(form.current);
+    setIsLoading(true);
 
     emailjs
-      .sendForm("service_jxi8oyf", "template_8ydezxa", form.current, {
+      .sendForm("service_jxi8oyf", "template_8ydezxa", formRef.current!, {
         publicKey: "hewZs0hGK_bkmpuex",
       })
       .then(
@@ -38,6 +46,12 @@ const ContactPage = () => {
             colorScheme: "green",
             duration: 1500,
           });
+
+          nameRef.current!.value = "";
+          emailRef.current!.value = "";
+          messageRef.current!.value = "";
+
+          setIsFormValid(false);
         },
         (error) => {
           toast({
@@ -47,11 +61,23 @@ const ContactPage = () => {
             duration: 1500,
           });
         }
-      );
+      )
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  const checkFormValidity = () => {
+    const isValid =
+      nameRef.current?.value.trim() !== "" &&
+      emailRef.current?.value.trim() !== "" &&
+      messageRef.current?.value.trim() !== "";
+
+    setIsFormValid(isValid);
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <form ref={formRef} onSubmit={sendEmail}>
       <Flex flexDirection="column" gap={4}>
         <FadeUp>
           <Heading>Contact</Heading>
@@ -70,25 +96,44 @@ const ContactPage = () => {
         <FadeUp>
           <FormControl>
             <FormLabel>Name</FormLabel>
-            <Input type="text" name="from_name" />
+            <Input
+              type="text"
+              name="from_name"
+              ref={nameRef}
+              onChange={checkFormValidity}
+            />
           </FormControl>
         </FadeUp>
         <FadeUp>
           <FormControl>
             <FormLabel>Email address</FormLabel>
-            <Input type="email" name="user_email" />
+            <Input
+              type="email"
+              name="user_email"
+              ref={emailRef}
+              onChange={checkFormValidity}
+            />
             <FormHelperText>I'll never share your email.</FormHelperText>
           </FormControl>
         </FadeUp>
         <FadeUp>
           <FormControl>
             <FormLabel>Message</FormLabel>
-            <Textarea name="message" />
+            <Textarea
+              name="message"
+              ref={messageRef}
+              onChange={checkFormValidity}
+            />
           </FormControl>
         </FadeUp>
         <FadeUp>
-          <Button width="100%" colorScheme="yellow" type="submit">
-            Send
+          <Button
+            width="100%"
+            colorScheme="yellow"
+            type="submit"
+            isDisabled={isLoading || !isFormValid}
+          >
+            {!isLoading ? "Send" : <Spinner />}
           </Button>
         </FadeUp>
       </Flex>
