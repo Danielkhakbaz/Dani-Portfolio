@@ -35,8 +35,8 @@ export const menuItems: MenuItemsType[] = [
     mobileIcon: <FaCode style={{ fontSize: "15px" }} />,
   },
   {
-    href: "/guestbook",
-    label: "Guestbook",
+    href: "/contact",
+    label: "Contact",
     mobileIcon: <FaComments style={{ fontSize: "15px" }} />,
   },
 ];
