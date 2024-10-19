@@ -12,6 +12,8 @@ import {
   FormHelperText,
   Input,
   Textarea,
+  Switch,
+  Select,
   Button,
   Spinner,
   useToast,
@@ -20,11 +22,12 @@ import {
 const ContactPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
-
-  const formRef = useRef<HTMLFormElement>(null);
+  const [relatedToWork, setRelatedToWork] = useState<"on" | "off">("off");
+  const [subjectValue, setSubjectValue] = useState<string>("");
 
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const toast = useToast();
@@ -34,8 +37,15 @@ const ContactPage = () => {
 
     setIsLoading(true);
 
+    const formData = {
+      from_name: nameRef.current!.value,
+      user_email: emailRef.current!.value,
+      subject: subjectRef.current?.value || "Non-work related",
+      message: messageRef.current!.value,
+    };
+
     emailjs
-      .sendForm("service_jxi8oyf", "template_8ydezxa", formRef.current!, {
+      .send("service_jxi8oyf", "template_8ydezxa", formData, {
         publicKey: "hewZs0hGK_bkmpuex",
       })
       .then(
@@ -49,6 +59,7 @@ const ContactPage = () => {
 
           nameRef.current!.value = "";
           emailRef.current!.value = "";
+          relatedToWork === "on" ? setSubjectValue("") : null;
           messageRef.current!.value = "";
 
           setIsFormValid(false);
@@ -69,15 +80,20 @@ const ContactPage = () => {
 
   const checkFormValidity = () => {
     const isValid =
-      nameRef.current?.value.trim() !== "" &&
-      emailRef.current?.value.trim() !== "" &&
-      messageRef.current?.value.trim() !== "";
+      relatedToWork === "off"
+        ? nameRef.current?.value.trim() !== "" &&
+          emailRef.current?.value.trim() !== "" &&
+          messageRef.current?.value.trim() !== ""
+        : nameRef.current?.value.trim() !== "" &&
+          emailRef.current?.value.trim() !== "" &&
+          subjectRef.current?.value.trim() !== "" &&
+          messageRef.current?.value.trim() !== "";
 
     setIsFormValid(isValid);
   };
 
   return (
-    <form ref={formRef} onSubmit={sendEmail}>
+    <form onSubmit={sendEmail}>
       <Flex flexDirection="column" gap={4}>
         <FadeUp>
           <Heading>Contact</Heading>
@@ -92,6 +108,23 @@ const ContactPage = () => {
           >
             If you want to contact me instantly, Leave a E-mail here!
           </Code>
+        </FadeUp>
+        <FadeUp>
+          <FormControl display="flex" alignItems="center">
+            <FormLabel htmlFor="related_to_work" marginBottom={0}>
+              Related to work
+            </FormLabel>
+            <Switch
+              id="related_to_work"
+              value={relatedToWork}
+              colorScheme="yellow"
+              onChange={() =>
+                setRelatedToWork((prevRelatedToWork) =>
+                  prevRelatedToWork === "off" ? "on" : "off"
+                )
+              }
+            />
+          </FormControl>
         </FadeUp>
         <FadeUp>
           <FormControl>
@@ -116,6 +149,32 @@ const ContactPage = () => {
             <FormHelperText>I'll never share your email.</FormHelperText>
           </FormControl>
         </FadeUp>
+        {relatedToWork === "on" && (
+          <FadeUp>
+            <FormControl>
+              <FormLabel>Subject</FormLabel>
+              <Input
+                as={Select}
+                type="text"
+                name="subject"
+                ref={subjectRef}
+                value={subjectValue}
+                onChange={(e) => {
+                  checkFormValidity();
+
+                  setSubjectValue(e.target.value);
+                }}
+              >
+                <option value="">Select object...</option>
+                <option value="Work Opportunity">Work Opportunity</option>
+                <option value="Projects that I'd loved to discuss about">
+                  Projects that I'd loved to discuss about
+                </option>
+                <option value="Others">Others</option>
+              </Input>
+            </FormControl>
+          </FadeUp>
+        )}
         <FadeUp>
           <FormControl>
             <FormLabel>Message</FormLabel>

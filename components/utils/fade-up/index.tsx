@@ -30,7 +30,11 @@ export const FadeUp = ({
         },
       }}
       viewport={{ once: true }}
-      transition={{ delay, type: "spring", duration }}
+      transition={{
+        delay,
+        type: "spring",
+        duration,
+      }}
       style={{
         width: "100%",
         height: "100%",
