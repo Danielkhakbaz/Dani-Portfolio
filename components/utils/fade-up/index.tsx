@@ -17,18 +17,19 @@ export const FadeUp = ({
   return (
     <MotionComponent
       tag="div"
-      initial="hidden"
-      whileInView="visible"
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 15,
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-        },
+      initial={{
+        opacity: 0,
+        y: 15,
       }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      exit={{
+        opacity: 0,
+        y: -15,
+      }}
+      whileInView="visible"
       viewport={{ once: true }}
       transition={{
         delay,

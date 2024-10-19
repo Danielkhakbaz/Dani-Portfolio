@@ -3,6 +3,7 @@
 import { useState, useRef, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import { FadeUp } from "@/components/utils/fade-up";
+import { AnimatePresence } from "framer-motion";
 import {
   Flex,
   Heading,
@@ -149,32 +150,34 @@ const ContactPage = () => {
             <FormHelperText>I'll never share your email.</FormHelperText>
           </FormControl>
         </FadeUp>
-        {relatedToWork === "on" && (
-          <FadeUp>
-            <FormControl>
-              <FormLabel>Subject</FormLabel>
-              <Input
-                as={Select}
-                type="text"
-                name="subject"
-                ref={subjectRef}
-                value={subjectValue}
-                onChange={(e) => {
-                  checkFormValidity();
+        <AnimatePresence mode="sync">
+          {relatedToWork === "on" && (
+            <FadeUp duration={0.25}>
+              <FormControl>
+                <FormLabel>Subject</FormLabel>
+                <Input
+                  as={Select}
+                  type="text"
+                  name="subject"
+                  ref={subjectRef}
+                  value={subjectValue}
+                  onChange={(e) => {
+                    checkFormValidity();
 
-                  setSubjectValue(e.target.value);
-                }}
-              >
-                <option value="">Select object...</option>
-                <option value="Work Opportunity">Work Opportunity</option>
-                <option value="Projects that I'd loved to discuss about">
-                  Projects that I'd loved to discuss about
-                </option>
-                <option value="Others">Others</option>
-              </Input>
-            </FormControl>
-          </FadeUp>
-        )}
+                    setSubjectValue(e.target.value);
+                  }}
+                >
+                  <option value="">Select object...</option>
+                  <option value="Work Opportunity">Work Opportunity</option>
+                  <option value="Projects that I'd loved to discuss about">
+                    Projects that I'd loved to discuss about
+                  </option>
+                  <option value="Others">Others</option>
+                </Input>
+              </FormControl>
+            </FadeUp>
+          )}
+        </AnimatePresence>
         <FadeUp>
           <FormControl>
             <FormLabel>Message</FormLabel>
