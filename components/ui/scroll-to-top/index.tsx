@@ -38,6 +38,7 @@ const ScrollToTop = () => {
       height="48px"
       aria-label="Scroll-to-top button"
       icon={<FaArrowAltCircleUp fontSize={30} />}
+      backgroundColor="rgba(255, 255, 255, 0.08)"
       color="white"
       colorScheme="whiteAlpha"
       onClick={handleScrollToTopButton}

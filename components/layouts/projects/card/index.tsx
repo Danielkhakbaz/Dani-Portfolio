@@ -28,7 +28,7 @@ const ProjectCard = ({
       _hover={{ backgroundColor: "#202020" }}
     >
       <Image
-        width="1000"
+        width="500"
         height="150"
         src={imageSrc}
         alt={alt}

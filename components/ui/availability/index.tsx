@@ -25,7 +25,7 @@ const Availability = () => {
       as={Link}
       href="/contact"
       height="48px"
-      display={{ md: "none", lg: "block" }}
+      display={{ base: "none", lg: "block" }}
       position="fixed"
       bottom={{ md: "25px", lg: "75px" }}
       right={{ md: "110px", lg: "125px" }}

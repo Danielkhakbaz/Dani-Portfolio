@@ -19,6 +19,9 @@ const Education = async () => {
                 height={60}
                 src={history.logo}
                 alt="Islamic Azad University's image"
+                rel="preload"
+                priority
+                fetchPriority="high"
                 style={{
                   width: "60px",
                   height: "60px",

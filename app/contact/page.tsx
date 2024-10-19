@@ -102,7 +102,8 @@ const ContactPage = () => {
         <FadeUp>
           <Code
             width="100%"
-            backgroundColor="gray"
+            backgroundColor="#999"
+            color="#080808"
             textAlign="center"
             borderRadius={8}
             paddingY={4}
@@ -147,7 +148,9 @@ const ContactPage = () => {
               ref={emailRef}
               onChange={checkFormValidity}
             />
-            <FormHelperText>I'll never share your email.</FormHelperText>
+            <FormHelperText color="#CBD5D9">
+              I'll never share your email.
+            </FormHelperText>
           </FormControl>
         </FadeUp>
         <AnimatePresence mode="sync">

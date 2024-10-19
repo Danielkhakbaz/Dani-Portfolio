@@ -38,6 +38,8 @@ const ImagesGrid = () => {
               alt="Danial Khakbaz at cafe"
               fill
               priority
+              rel="preload"
+              fetchPriority="high"
               style={{
                 width: "100%",
                 height: "100%",
@@ -69,11 +71,13 @@ const ImagesGrid = () => {
               alt="Danial Khakbaz playing basketball"
               fill
               priority
+              rel="preload"
+              fetchPriority="high"
               style={{
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                objectPosition: "bottom",
+                objectPosition: "0 30%",
                 border: "2.5px solid #3D3D3D",
                 borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
               }}
@@ -97,6 +101,8 @@ const ImagesGrid = () => {
               alt="Danial Khakbaz at the north of Iran"
               fill
               priority
+              rel="preload"
+              fetchPriority="high"
               style={{
                 width: "100%",
                 height: "100%",
@@ -126,6 +132,8 @@ const ImagesGrid = () => {
               alt="Danial Khakbaz working from home"
               fill
               priority
+              rel="preload"
+              fetchPriority="high"
               style={{
                 width: "100%",
                 height: "100%",

@@ -45,7 +45,7 @@ const BlogCard = async ({ title, date, image, alt }: BlogCardProps) => {
         {title}
       </Heading>
       <Flex width="100%" justifyContent="space-between" marginTop={2}>
-        <Text fontSize={13} color="#56585D" textAlign="justify">
+        <Text fontSize={13} color="#9B9DA2" textAlign="justify">
           {date}
         </Text>
       </Flex>
