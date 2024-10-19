@@ -4,7 +4,6 @@ import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import Availability from "@/components/ui/availability";
-import { SessionProviderFromNextAuth } from "@/lib/providers/session";
 import { ChakraProvider } from "@/lib/providers/chakra";
 import { LatoFont } from "@/styles/font";
 import { ViewTransitions } from "next-view-transitions";
@@ -35,26 +34,23 @@ export const metadata: Metadata = {
 };
 
 type RootLayoutProps = {
-  session: never;
   children: ReactNode;
 };
 
-const RootLayout = async ({ session, children }: RootLayoutProps) => {
+const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <ViewTransitions>
       <html lang="en">
         <body className={LatoFont.className}>
-          <SessionProviderFromNextAuth session={session}>
-            <ChakraProvider>
-              <Navbar />
-              <Container maxWidth="container.sm" minHeight="80vh" paddingY={6}>
-                {children}
-              </Container>
-              <Footer />
-              <ScrollToTop />
-              <Availability />
-            </ChakraProvider>
-          </SessionProviderFromNextAuth>
+          <ChakraProvider>
+            <Navbar />
+            <Container maxWidth="container.sm" minHeight="80vh" paddingY={6}>
+              {children}
+            </Container>
+            <Footer />
+            <ScrollToTop />
+            <Availability />
+          </ChakraProvider>
         </body>
       </html>
     </ViewTransitions>
