@@ -4,7 +4,7 @@ import { useState } from "react";
 import ProjectCard from "@/components/layouts/projects/card";
 import { FadeUp } from "@/components/utils/fade-up";
 import { projects } from "@/lib/constants/projects";
-import { ProjectsType } from "@/types/projects";
+import { ProjectsType } from "@/lib/constants/projects";
 import { Flex, Heading, Grid, useDisclosure } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 

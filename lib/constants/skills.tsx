@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import {
   SiReact,
   SiNextdotjs,
@@ -10,7 +11,9 @@ import {
   SiReactquery,
 } from "react-icons/si";
 
-export const skills = [
+type SkillsType = ReactNode;
+
+export const skills: SkillsType[] = [
   <SiReact
     style={{
       width: "40px",

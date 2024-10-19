@@ -2,7 +2,7 @@
 
 import { Fragment } from "react";
 import Image from "next/image";
-import { ProjectsType } from "@/types/projects";
+import { ProjectsType } from "@/lib/constants/projects";
 import {
   Drawer,
   DrawerOverlay,

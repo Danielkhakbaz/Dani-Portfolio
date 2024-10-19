@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 import { highlight } from "sugar-high";
 import type { MDXComponents } from "mdx/types";
 import {

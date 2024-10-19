@@ -1,8 +1,28 @@
+import { ReactElement } from "react";
 import { Link, Flex, Badge } from "@chakra-ui/react";
 import { poweredBy } from "@/lib/constants/powered-by";
 import { stacks } from "@/lib/constants/stacks";
-import { ProjectsType } from "@/types/projects";
 import { FaRightFromBracket } from "react-icons/fa6";
+
+export type ProjectsType = {
+  title: string;
+  description: string;
+  icon: number;
+  images: {
+    src: string;
+    alt: string;
+  }[];
+  poweredBy: {
+    label: string;
+    icon: ReactElement;
+    backgroundColor: string;
+  };
+  sections: {
+    label: string;
+    component: ReactElement;
+    divider?: boolean;
+  }[];
+};
 
 export const projects: ProjectsType[] = [
   {
