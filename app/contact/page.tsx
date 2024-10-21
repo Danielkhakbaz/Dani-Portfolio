@@ -3,6 +3,7 @@
 import { useState, useRef, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import { FadeUp } from "@/components/utils/fade-up";
+import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
 import { AnimatePresence } from "framer-motion";
 import {
   Flex,
@@ -99,7 +100,7 @@ const ContactPage = () => {
         <FadeUp>
           <Heading>Contact</Heading>
         </FadeUp>
-        <FadeUp>
+        <FadeUp delay={MOTION_COMPONENT_DELAY / 2}>
           <Code
             width="100%"
             backgroundColor="#999"
@@ -111,7 +112,7 @@ const ContactPage = () => {
             If you want to contact me instantly, Leave a E-mail here!
           </Code>
         </FadeUp>
-        <FadeUp>
+        <FadeUp delay={MOTION_COMPONENT_DELAY}>
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="related_to_work" marginBottom={0}>
               Related to work
@@ -128,7 +129,7 @@ const ContactPage = () => {
             />
           </FormControl>
         </FadeUp>
-        <FadeUp>
+        <FadeUp delay={MOTION_COMPONENT_DELAY}>
           <FormControl>
             <FormLabel>Name</FormLabel>
             <Input
@@ -139,7 +140,7 @@ const ContactPage = () => {
             />
           </FormControl>
         </FadeUp>
-        <FadeUp>
+        <FadeUp delay={MOTION_COMPONENT_DELAY}>
           <FormControl>
             <FormLabel>Email address</FormLabel>
             <Input
@@ -155,7 +156,7 @@ const ContactPage = () => {
         </FadeUp>
         <AnimatePresence mode="sync">
           {relatedToWork === "on" && (
-            <FadeUp duration={0.25}>
+            <FadeUp duration={MOTION_COMPONENT_DELAY / 2}>
               <FormControl>
                 <FormLabel>Subject</FormLabel>
                 <Input
@@ -181,7 +182,7 @@ const ContactPage = () => {
             </FadeUp>
           )}
         </AnimatePresence>
-        <FadeUp>
+        <FadeUp delay={MOTION_COMPONENT_DELAY}>
           <FormControl>
             <FormLabel>Message</FormLabel>
             <Textarea
@@ -191,7 +192,7 @@ const ContactPage = () => {
             />
           </FormControl>
         </FadeUp>
-        <FadeUp>
+        <FadeUp delay={MOTION_COMPONENT_DELAY}>
           <Button
             width="100%"
             colorScheme="yellow"

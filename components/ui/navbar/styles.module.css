@@ -1,9 +1,13 @@
 .logo__link {
   width: fit-content;
-  transition: 0.4s;
+  transition: transform 0.4s ease;
+  transform: scale(1);
   border-radius: 4;
   padding: 2 0.5;
 }
 .logo__link:hover {
   transform: scale(1.1);
+}
+.logo__link:active {
+  transform: scale(1.2);
 }

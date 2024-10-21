@@ -9,33 +9,38 @@ type FadeUpProps = {
   children: ReactNode;
 };
 
+export const MOTION_COMPONENT_DELAY = 0.4;
+
 export const FadeUp = ({
   delay = 0,
-  duration = 0.5,
+  duration = MOTION_COMPONENT_DELAY,
   children,
 }: FadeUpProps) => {
   return (
     <MotionComponent
       tag="div"
-      initial={{
-        opacity: 0,
-        y: 15,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      exit={{
-        opacity: 0,
-        y: -15,
+      initial="hidden"
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 15,
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+        animate: {
+          opacity: 1,
+          y: 0,
+        },
+        exit: {
+          opacity: 0,
+          y: -15,
+        },
       }}
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{
-        delay,
-        type: "spring",
-        duration,
-      }}
+      transition={{ delay, type: "spring", duration }}
       style={{
         width: "100%",
         height: "100%",

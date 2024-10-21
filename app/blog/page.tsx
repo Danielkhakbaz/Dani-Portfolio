@@ -3,6 +3,7 @@ import { Link } from "next-view-transitions";
 import BlogCard from "@/components/layouts/blog/card";
 import { FadeUp } from "@/components/utils/fade-up";
 import { blogPosts } from "@/lib/constants/blog-posts";
+import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
 import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
 import moment from "moment";
 
@@ -11,8 +12,6 @@ export const metadata: Metadata = {
   description:
     "Read all my thoughts about technologies and programming in general.",
 };
-
-const MOTION_COMPONENT_DELAY = 0.25;
 
 const sortedBlogPosts = blogPosts.sort((a, b) => {
   return (
@@ -24,7 +23,7 @@ const sortedBlogPosts = blogPosts.sort((a, b) => {
 const BlogPage = async () => {
   return (
     <Flex flexDirection="column" gap={6}>
-      <FadeUp delay={MOTION_COMPONENT_DELAY / 2}>
+      <FadeUp>
         <Heading>Blog</Heading>
       </FadeUp>
       <Grid
@@ -32,7 +31,7 @@ const BlogPage = async () => {
         gap={6}
       >
         {sortedBlogPosts.map(({ link, title, date, image, alt }, index) => (
-          <FadeUp key={link} delay={MOTION_COMPONENT_DELAY * (index + 1)}>
+          <FadeUp key={link} delay={(MOTION_COMPONENT_DELAY / 2) * (index + 1)}>
             <GridItem as={Link} href={link}>
               <BlogCard title={title} date={date} image={image} alt={alt} />
             </GridItem>

@@ -5,14 +5,13 @@ import ProjectCard from "@/components/layouts/projects/card";
 import { FadeUp } from "@/components/utils/fade-up";
 import { projects } from "@/lib/constants/projects";
 import { ProjectsType } from "@/lib/constants/projects";
+import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
 import { Flex, Heading, Grid, useDisclosure } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
 const ProjectDrawer = dynamic(
   () => import("@/components/layouts/projects/drawer")
 );
-
-const MOTION_COMPONENT_DELAY = 0.25;
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectsType | null>(
@@ -53,7 +52,7 @@ const Projects = () => {
               key={MOTION_COMPONENT_DELAY * index}
               onClick={() => selectProject(project.title)}
             >
-              <FadeUp delay={MOTION_COMPONENT_DELAY}>
+              <FadeUp delay={MOTION_COMPONENT_DELAY / 2}>
                 <ProjectCard
                   imageSrc={project.images[project.icon].src}
                   alt={project.images[0].alt}

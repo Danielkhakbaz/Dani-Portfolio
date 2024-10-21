@@ -1,9 +1,8 @@
 import ExperienceCard from "@/components/layouts/experiences/experiences/card";
 import { FadeUp } from "@/components/utils/fade-up";
 import { workExperiences } from "@/lib/constants/work-experiences";
+import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
 import { Flex } from "@chakra-ui/react";
-
-const MOTION_COMPONENT_DELAY = 0.5;
 
 const Experiences = async () => {
   return (

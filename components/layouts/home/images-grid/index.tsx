@@ -6,9 +6,8 @@ import DanialAtCafe from "@/public/images/danial-at-cafe.webp";
 import DanialWhileRunning from "@/public/images/danial-while-running.webp";
 import DanialAtShomal from "@/public/images/danial-at-shomal.webp";
 import DanialFromWorkAtHome from "@/public/images/danial-from-work-at-home.webp";
+import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
 import { Grid, GridItem, Flex, useMediaQuery } from "@chakra-ui/react";
-
-const MOTION_COMPONENT_DELAY = 0.5;
 
 const ImagesGrid = () => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
