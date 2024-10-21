@@ -9,7 +9,7 @@ import Interests from "@/components/layouts/home/interests";
 import Education from "@/components/layouts/home/education";
 import Socials from "@/components/layouts/home/socials";
 import { FadeUp } from "@/components/utils/fade-up";
-import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
+import { MOTION_COMPONENT_DELAY } from "@/lib/constants";
 import { Flex } from "@chakra-ui/react";
 
 const HomePageItems: ReactNode[] = [

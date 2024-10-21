@@ -5,6 +5,7 @@ import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type ProjectCardProps = {
   imageSrc: string;
+  blurImage: string;
   alt: string;
   title: string;
   description: string;
@@ -12,6 +13,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({
   imageSrc,
+  blurImage,
   alt,
   title,
   description,
@@ -35,6 +37,8 @@ const ProjectCard = ({
         rel="preload"
         priority
         fetchPriority="high"
+        placeholder="blur"
+        blurDataURL={blurImage}
         style={{
           borderRadius: "0.4rem",
         }}

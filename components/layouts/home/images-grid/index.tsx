@@ -6,7 +6,7 @@ import DanialAtCafe from "@/public/images/danial-at-cafe.webp";
 import DanialWhileRunning from "@/public/images/danial-while-running.webp";
 import DanialAtShomal from "@/public/images/danial-at-shomal.webp";
 import DanialFromWorkAtHome from "@/public/images/danial-from-work-at-home.webp";
-import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
+import { MOTION_COMPONENT_DELAY } from "@/lib/constants";
 import { Grid, GridItem, Flex, useMediaQuery } from "@chakra-ui/react";
 
 const ImagesGrid = () => {
@@ -39,6 +39,8 @@ const ImagesGrid = () => {
               priority
               rel="preload"
               fetchPriority="high"
+              placeholder="blur"
+              blurDataURL="|GBzF7_3IUM|%gX9IoWBo1.7x]fSjGt6t7j[WBV@Efoyt7n%t6xut6V@ay~q?b%1a~g3W=WBafay?axuRQWBkCoeaeaeRjSibHIVV?t7xts:j[f6D%t6-;ozRjWXozWCjZr=a#ofWBjsofWBRjWAxvWCE1V@f8e.j?t6j["
               style={{
                 width: "100%",
                 height: "100%",
@@ -72,6 +74,8 @@ const ImagesGrid = () => {
               priority
               rel="preload"
               fetchPriority="high"
+              placeholder="blur"
+              blurDataURL="|CJRje~W%hnhIU-;xvxtog-h-oMxxvX9R%xu%2kDIoM{-pE2IptRoJV?Rjo}NGM_xus:IUt7tRsmWEs.NGt7aKofkCWWx]X9IUV@adt7oza#xuozM_WVR*adoLkCt7xaofWC%MxuIoRPofsoM{oz-;RjoKWqRjf6M{a#ax"
               style={{
                 width: "100%",
                 height: "100%",
@@ -102,6 +106,8 @@ const ImagesGrid = () => {
               priority
               rel="preload"
               fetchPriority="high"
+              placeholder="blur"
+              blurDataURL="|sE|0txvWUWBWBf7fkWBay?wt7axayayayayWBazWBWVofj[j[ayayayfRWBfkofj@f6fRj[ayayxuofa|ayayj[fkayayxuofaya|j[f6ayj[fRfkoff6ayj[fQazj[ayRjayj[ayj[ayayayayRjaxj[j@j[ayayayay"
               style={{
                 width: "100%",
                 height: "100%",
@@ -133,6 +139,8 @@ const ImagesGrid = () => {
               priority
               rel="preload"
               fetchPriority="high"
+              placeholder="blur"
+              blurDataURL="|59t1C4.-q%2WBRjM{a}xb9Y%MNGRjoMt7ogWBf6?H_3Rjof%2WBayofof~WRjWBNGxuWBM{WBofxus:-;M{WBt7ayoLof-pxuD%Rjofj[ofofj[s:t7RjoLWVRjj[t6WB?HR*Rjt7E1j]ofWBRjM_M{WURjs:ofayt7of"
               style={{
                 width: "100%",
                 height: "100%",

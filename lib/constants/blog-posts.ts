@@ -8,6 +8,7 @@ type BlogPostsType = {
   title: string;
   date: string;
   image: StaticImageData;
+  blurImage: string;
   alt: string;
 };
 
@@ -17,6 +18,8 @@ export const blogPosts: BlogPostsType[] = [
     title: "Kill Process on Mac",
     date: "February 13, 2024",
     image: KillProcessOnMac,
+    blurImage:
+      "|DSY?bMx?a.8_No#4nR5nOnQoffkRjRjRjt7t7tQ_3x[IUIBDini?bo}X8NFRjoft8%Mt7RjM{M{R%e.xuoztQR*IUs:xH?uofV[a{RjWVaeofjb%zbFRQn+e.s:s:RjM{?vkCRjjZRPWBofkCbFf+j[ofWUkBkCRjoMoL",
     alt: "Kill Process on Mac's Image",
   },
   {
@@ -24,6 +27,8 @@ export const blogPosts: BlogPostsType[] = [
     title: "Delete Directories on Mac",
     date: "February 09, 2024",
     image: DeleteDirectoriesOnMac,
+    blurImage:
+      "|iGvtJs7xGt3s6jHR-o#R+??sos8ocnzo0W?ocR.IDbba}aya~fjjsayoLNEX7NdWBW@bHn#WDs+tukVWYWXWskBn$afo0V[WDWUflbHfka#jsa#M*aeofa}a{WCj[j[j?ovoea}a~WCayoLjsj?bWbIa{a#fkfPjuoJju",
     alt: "Delete Directories on Mac's Image",
   },
   {
@@ -31,6 +36,8 @@ export const blogPosts: BlogPostsType[] = [
     title: "Disable Cors on Chrome",
     date: "February 11, 2024",
     image: DisableCorsOnChrome,
+    blurImage:
+      "|HS4NL%QI-$}RqoGslR:t2{bSaxINKs*nmS4s*WFGwTLnNj[X9adjsbIayS|#mNGt6WFbaoJWCov:iROw{NKoxfSWXs+WEGJXUaJs.SiaxoJWrjr+Xv|XAWCnhkDa#jFofKRS*ocn%WXaej?bbWC#QbXkDWBjYj]WWj?a#",
     alt: "Disable Cors on Chrome's Image",
   },
 ];

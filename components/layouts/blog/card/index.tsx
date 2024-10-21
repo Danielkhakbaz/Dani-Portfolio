@@ -5,10 +5,17 @@ type BlogCardProps = {
   title: string;
   date: string;
   image: StaticImageData;
+  blurImage: string;
   alt: string;
 };
 
-const BlogCard = async ({ title, date, image, alt }: BlogCardProps) => {
+const BlogCard = async ({
+  title,
+  date,
+  image,
+  blurImage,
+  alt,
+}: BlogCardProps) => {
   return (
     <Flex
       flexDirection="column"
@@ -21,13 +28,15 @@ const BlogCard = async ({ title, date, image, alt }: BlogCardProps) => {
       }}
     >
       <Image
-        width="10000000"
+        width="500"
         height="100"
         src={image}
         alt={alt}
         rel="preload"
         priority
         fetchPriority="high"
+        placeholder="blur"
+        blurDataURL={blurImage}
         style={{
           minHeight: "145px",
           objectFit: "cover",

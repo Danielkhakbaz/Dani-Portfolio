@@ -3,7 +3,7 @@ import { Link } from "next-view-transitions";
 import BlogCard from "@/components/layouts/blog/card";
 import { FadeUp } from "@/components/utils/fade-up";
 import { blogPosts } from "@/lib/constants/blog-posts";
-import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
+import { MOTION_COMPONENT_DELAY } from "@/lib/constants";
 import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
 import moment from "moment";
 
@@ -30,13 +30,24 @@ const BlogPage = async () => {
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         gap={6}
       >
-        {sortedBlogPosts.map(({ link, title, date, image, alt }, index) => (
-          <FadeUp key={link} delay={(MOTION_COMPONENT_DELAY / 2) * (index + 1)}>
-            <GridItem as={Link} href={link}>
-              <BlogCard title={title} date={date} image={image} alt={alt} />
-            </GridItem>
-          </FadeUp>
-        ))}
+        {sortedBlogPosts.map(
+          ({ link, title, date, image, blurImage, alt }, index) => (
+            <FadeUp
+              key={link}
+              delay={(MOTION_COMPONENT_DELAY / 2) * (index + 1)}
+            >
+              <GridItem as={Link} href={link}>
+                <BlogCard
+                  title={title}
+                  date={date}
+                  image={image}
+                  blurImage={blurImage}
+                  alt={alt}
+                />
+              </GridItem>
+            </FadeUp>
+          )
+        )}
       </Grid>
     </Flex>
   );

@@ -2,14 +2,13 @@
 
 import { ReactNode } from "react";
 import { MotionComponent } from "@/components/utils/motion";
+import { MOTION_COMPONENT_DELAY } from "@/lib/constants";
 
 type FadeUpProps = {
   delay?: number;
   duration?: number;
   children: ReactNode;
 };
-
-export const MOTION_COMPONENT_DELAY = 0.4;
 
 export const FadeUp = ({
   delay = 0,

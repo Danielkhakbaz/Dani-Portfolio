@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import { FadeUp } from "@/components/utils/fade-up";
 import { skills } from "@/lib/constants/skills";
-import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
+import { MOTION_COMPONENT_DELAY } from "@/lib/constants";
 import { Flex } from "@chakra-ui/react";
 
-export const Skills = async () => {
+const Skills = async () => {
   return (
-    <FadeUp delay={MOTION_COMPONENT_DELAY}>
+    <FadeUp delay={MOTION_COMPONENT_DELAY / 2}>
       <Flex
         width="100%"
         flexWrap={{ base: "wrap", md: "nowrap" }}

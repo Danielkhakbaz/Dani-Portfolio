@@ -66,6 +66,8 @@ const ProjectDrawer = ({ project, onClose, isOpen }: ProjectDrawerProps) => {
                 rel="preload"
                 priority
                 fetchPriority="high"
+                placeholder="blur"
+                blurDataURL={image.blurImage}
                 style={{
                   borderRadius: "0.4rem",
                 }}

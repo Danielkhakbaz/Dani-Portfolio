@@ -3,7 +3,7 @@
 import { useState, useRef, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import { FadeUp } from "@/components/utils/fade-up";
-import { MOTION_COMPONENT_DELAY } from "@/components/utils/fade-up";
+import { MOTION_COMPONENT_DELAY } from "@/lib/constants";
 import { AnimatePresence } from "framer-motion";
 import {
   Flex,
