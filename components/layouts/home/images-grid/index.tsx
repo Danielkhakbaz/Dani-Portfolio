@@ -68,7 +68,7 @@ const ImagesGrid = () => {
           <FadeUp delay={MOTION_COMPONENT_DELAY * 2}>
             <Image
               src={DanialWhileRunning}
-              sizes="(max-width: 768px) 450px, 80vw"
+              sizes="(max-width: 768px) 350px, 65vw"
               alt="Danial Khakbaz playing basketball"
               fill
               priority
@@ -100,7 +100,7 @@ const ImagesGrid = () => {
           <FadeUp delay={MOTION_COMPONENT_DELAY * 3}>
             <Image
               src={DanialAtShomal}
-              sizes="(max-width: 768px) 450px, 80vw"
+              sizes="(max-width: 768px) 100vw, 65vw"
               alt="Danial Khakbaz at the north of Iran"
               fill
               priority

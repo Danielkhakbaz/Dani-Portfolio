@@ -16,8 +16,8 @@ const BlogNav = async ({ date, neededTime, children }: BlogNavProps) => {
   return (
     <Flex flexDirection="column" gap={4}>
       <Link href="/blog">
-        <Button variant="outline" aria-label="back-button">
-          <FaArrowLeft />
+        <Button variant="outline" color="white" aria-label="back-button">
+          <FaArrowLeft color="white" />
         </Button>
       </Link>
       {children}
@@ -47,12 +47,12 @@ const BlogNav = async ({ date, neededTime, children }: BlogNavProps) => {
             />
             <Flex flexDirection="column">
               <Text fontWeight="bold">Danial Khakbaz</Text>
-              <Text fontWeight="bold" fontSize={13} color="#56585D">
+              <Text fontWeight="bold" fontSize={13} color="#9B9DA2">
                 {date}
               </Text>
               <Text
                 fontSize={13}
-                color="#56585D"
+                color="#9B9DA2"
                 display="inline-flex"
                 alignItems="center"
                 gap={1}

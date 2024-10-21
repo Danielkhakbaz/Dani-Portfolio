@@ -82,7 +82,13 @@ const components: MDXComponents = {
   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
     const codeHTML = highlight(children as string);
 
-    return <Code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+    return (
+      <Code
+        backgroundColor="GrayText"
+        dangerouslySetInnerHTML={{ __html: codeHTML }}
+        {...props}
+      />
+    );
   },
   Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
     <Table variant="simpaddingLefte">

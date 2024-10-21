@@ -7,7 +7,6 @@ import { FaRightFromBracket } from "react-icons/fa6";
 export type ProjectsType = {
   title: string;
   description: string;
-  icon: number;
   images: {
     src: string;
     blurImage: string;
@@ -30,7 +29,6 @@ export const projects: ProjectsType[] = [
   {
     title: "Danial's Portfolio",
     description: "What can I say? This is just my portfolio.",
-    icon: 1,
     images: [
       {
         src: "/images/projects/portfolio/light-house.png",
@@ -123,7 +121,6 @@ export const projects: ProjectsType[] = [
     title: "Notes App",
     description:
       "a Note-app using LocalStorage API, so your data will never be removed unless you choose to remove it.",
-    icon: 1,
     images: [
       {
         src: "/images/projects/notes-app/light-house.png",
@@ -214,7 +211,6 @@ export const projects: ProjectsType[] = [
   {
     title: "The Film Inventory",
     description: "a Inventory of a lot of animes from all across the globe.",
-    icon: 1,
     images: [
       {
         src: "/images/projects/the-film-inventory/light-house.png",
@@ -307,7 +303,6 @@ export const projects: ProjectsType[] = [
   {
     title: "Danial's Links",
     description: "Access my links via this website.",
-    icon: 1,
     images: [
       {
         src: "/images/projects/links/light-house.png",
@@ -395,7 +390,6 @@ export const projects: ProjectsType[] = [
   {
     title: "Margelo Software Agency",
     description: "a Clone of a software-agency website named margelo.",
-    icon: 1,
     images: [
       {
         src: "/images/projects/software-agency-website/light-house.png",
@@ -484,7 +478,6 @@ export const projects: ProjectsType[] = [
     title: "Use-shared library",
     description:
       "a Simple react-hook using contextAPI in order to share a state throughout the whole app.",
-    icon: 0,
     images: [
       {
         src: "/images/projects/use-shared/screen-shot.png",
@@ -567,7 +560,6 @@ export const projects: ProjectsType[] = [
     title: "Emoji Todo",
     description:
       "Built with the cutting-edge technologies just to show the power of server-actions.",
-    icon: 0,
     images: [
       {
         src: "/images/projects/emoji-todo/screen-shot.png",

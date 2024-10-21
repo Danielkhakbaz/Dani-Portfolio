@@ -1,4 +1,5 @@
 import { Link } from "next-view-transitions";
+import { FadeUp } from "@/components/utils/fade-up";
 import { Flex, Heading, Button } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
 
@@ -12,21 +13,23 @@ const NotFound = async () => {
       gap={8}
     >
       <Heading fontWeight="bold" size={{ base: "xl", md: "2xl" }}>
-        NOT FOUND!
+        <FadeUp>NOT FOUND!</FadeUp>
       </Heading>
       <Heading
         as="h3"
         fontWeight="extrabold"
         fontSize={{ base: "8rem", md: "15rem" }}
       >
-        404
+        <FadeUp delay={0.25}>404</FadeUp>
       </Heading>
       <Flex flexDirection="column">
-        <Link href="/">
-          <Button colorScheme="yellow" gap={2}>
-            Back to the Home <FaHome fontSize={18} />
-          </Button>
-        </Link>
+        <FadeUp delay={0.5}>
+          <Link href="/">
+            <Button colorScheme="yellow" gap={2}>
+              Back to the Home <FaHome fontSize={18} />
+            </Button>
+          </Link>
+        </FadeUp>
       </Flex>
     </Flex>
   );

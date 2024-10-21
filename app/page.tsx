@@ -32,7 +32,7 @@ const HomePage = async () => {
           key={MOTION_COMPONENT_DELAY * index}
           delay={MOTION_COMPONENT_DELAY}
         >
-          {component}2
+          {component}
         </FadeUp>
       ))}
     </Flex>

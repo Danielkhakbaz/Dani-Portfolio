@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import ProjectCard from "@/components/layouts/projects/card";
 import { FadeUp } from "@/components/utils/fade-up";
 import { projects } from "@/lib/constants/projects";
 import { ProjectsType } from "@/lib/constants/projects";
 import { MOTION_COMPONENT_DELAY } from "@/lib/constants";
 import { Flex, Heading, Grid, useDisclosure } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
 
 const ProjectDrawer = dynamic(
   () => import("@/components/layouts/projects/drawer")
@@ -54,7 +54,11 @@ const Projects = () => {
             >
               <FadeUp delay={MOTION_COMPONENT_DELAY / 2}>
                 <ProjectCard
-                  imageSrc={project.images[project.icon].src}
+                  imageSrc={
+                    project.images[1]
+                      ? project.images[1].src
+                      : project.images[0].src
+                  }
                   blurImage={project.blurImage}
                   alt={project.images[0].alt}
                   title={project.title}
