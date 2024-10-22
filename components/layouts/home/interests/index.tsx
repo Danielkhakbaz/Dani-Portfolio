@@ -70,8 +70,8 @@ const Interests = async () => {
               cranking up the tunes with your loved ones. You might wonder about
               my favorite music - let me share a glimpse:{" "}
               <Text as="span" fontWeight="bolder" display="inline">
-                Zedbazi, Mehrad Hidden, Wantons, Twenty One Pilots, and many
-                more
+                Twenty One Pilots, Zedbazi, Mehrad Hidden, Isam, Wantons, and
+                many more
               </Text>
               . Don&apos;t hesitate to follow me on Spotify ; let&apos;s connect
               through the beats We love.
