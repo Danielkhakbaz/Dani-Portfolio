@@ -57,7 +57,7 @@ const Interests = async () => {
             </Text>
           }
         >
-          <Badge colorScheme="whatsapp" width="fit-content" fontSize={14.5}>
+          <Badge colorScheme="green" width="fit-content" fontSize={14.5}>
             📚 Books
           </Badge>
         </Tooltip>
