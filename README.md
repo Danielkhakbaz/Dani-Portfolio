@@ -69,5 +69,6 @@ Here are some helpful scripts to assist in the development and maintenance of th
 <h1 align="center">
    Enjoy!
    <br />
+   <br />
   <img src="public/logos/Danial-Khakbaz-Logo.webp" alt="Danial Khakbaz's logo" width="50">
 </h1>
