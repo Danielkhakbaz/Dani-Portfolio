@@ -43,10 +43,12 @@ To set up this project locally, follow these steps:
    cd danielo-portfolio
 
 2. **Install dependencies**:
-   ```yarn
+   ```bash
+   yarn
 
 3. **Run the development server**:
-   ```yarn dev
+   ```bash
+   yarn dev
 
 4. **Open http://localhost:3000 in your browser to see the project**.
 
@@ -54,16 +56,12 @@ To set up this project locally, follow these steps:
 
 Here are some helpful scripts to assist in the development and maintenance of this project:
 
-```dev```: Runs the app in development mode.
-```build```: Compiles the app for production.
-```start```: Starts the production server.
-```lint```: Lints and fixes files using ESLint.
-```fix```: Formats files using Prettier.
-```check-prettier```: Checks the code format without making changes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more information.
+```dev```: Runs the app in development mode. <br/>
+```build```: Compiles the app for production. <br/>
+```start```: Starts the production server. <br/>
+```lint```: Lints and fixes files using ESLint. <br/>
+```fix```: Formats files using Prettier. <br/>
+```check-prettier```: Checks the code format without making changes. <br/>
 
 ---
 
