@@ -1,6 +1,6 @@
 # Danial Khakbaz's Portfolio
 
-<img src="public/images/projects/portfolio/screen-shot.png" alt="The screen-shot of the daniel's portfolio" />
+<a href="https://danieloo.vercel.app/" target="_blank"><img src="public/images/projects/portfolio/screen-shot.png" alt="The screen-shot of the daniel's portfolio" /></a>
 
 Danial Khakbaz's portfolio built with [Next.js](https://nextjs.org/), showcasing his skills as a Front-end developer with a journey toward becoming a Full-stack developer. This project highlights his ambition for continuous learning and crafting seamless web applications using modern technologies.
 
@@ -34,13 +34,48 @@ This portfolio website serves as a professional platform to showcase Danial’s 
 - **[EmailJS](https://www.emailjs.com/)** - Service to send emails directly from the client-side.
 - **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with static typing.
 
+## Folder Structure
+
+```plaintext
+danielo-portfolio/
+├── app/                        # Source files for the main app logic
+│   ├── blog/                   # Blog section (page and components for blog posts)
+│   ├── contact/                # Contact section (page and components for contact forms)
+│   ├── experiences/            # Experiences section (page and components for work experience)
+│   ├── projects/               # Projects section (page and components for showcasing projects)
+│   ├── error.tsx               # Custom error page
+│   ├── favicon.ico             # Favicon for the website
+│   ├── layout.tsx              # Root layout component for setting up global layouts
+│   ├── not-found.tsx           # Custom 404 page for handling not-found routes
+│   └── page.tsx                # Main landing page component
+│
+├── components/                 # Reusable UI components
+│   ├── layouts/                # Layout components for structuring pages
+│   └── ui/                     # Small, reusable UI components like buttons, inputs, etc.
+│
+├── lib/                        # Utility libraries and application logic
+│   ├── constants/              # Constants and configurations used throughout the app
+│   └── providers/              # Context providers for managing global state and data
+│
+├── styles/                     # Global and theme-specific styling files
+│   ├── font/                   # Font files or font-related configurations
+│   ├── theme/                  # Theme settings for design consistency (colors, typography, etc.)
+│   └── globals.css             # Global CSS applied to the entire application
+│
+├── .eslintrc.json              # ESLint configuration for linting and code standards
+├── .prettierrc                 # Prettier configuration for consistent code formatting
+├── next.config.js              # Next.js configuration settings
+├── package.json                # Project metadata, scripts, and dependencies
+└── README.md                   # Documentation file explaining the project setup and usage
+```
+
 ## Installation
 
 To set up this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/danielo-portfolio.git
+   git clone https://github.com/Danielkhakbaz/Danielo-Portfolio
    cd danielo-portfolio
 
 2. **Install dependencies**:
