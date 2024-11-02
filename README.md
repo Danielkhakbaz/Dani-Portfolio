@@ -56,11 +56,11 @@ To set up this project locally, follow these steps:
 
 Here are some helpful scripts to assist in the development and maintenance of this project:
 
-```dev```: Runs the app in development mode. <br/>
-```build```: Compiles the app for production. <br/>
-```start```: Starts the production server. <br/>
-```lint```: Lints and fixes files using ESLint. <br/>
-```fix```: Formats files using Prettier. <br/>
+```dev```: Runs the app in development mode. <br/><br/>
+```build```: Compiles the app for production. <br/><br/>
+```start```: Starts the production server. <br/><br/>
+```lint```: Lints and fixes files using ESLint. <br/><br/>
+```fix```: Formats files using Prettier. <br/><br/>
 ```check-prettier```: Checks the code format without making changes. <br/>
 
 ---
