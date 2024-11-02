@@ -63,5 +63,3 @@ Here are some helpful scripts to assist in the development and maintenance of th
 ```lint```: Lints and fixes files using ESLint. <br/><br/>
 ```fix```: Formats files using Prettier. <br/><br/>
 ```check-prettier```: Checks the code format without making changes. <br/>
-
----
