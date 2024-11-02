@@ -1,6 +1,8 @@
 # Danial Khakbaz's Portfolio
 
-Danial Khakbaz's portfolio built with [Next.js](https://nextjs.org/), showcasing his skills as a Front-end developer with a journey toward becoming a Full-stack developer by the end of 2024. This project highlights his ambition for continuous learning and crafting seamless web applications using modern technologies.
+<img src="public/images/projects/portfolio/screen-shot.png" alt="The screen-shot of the daniel's portfolio" />
+
+Danial Khakbaz's portfolio built with [Next.js](https://nextjs.org/), showcasing his skills as a Front-end developer with a journey toward becoming a Full-stack developer. This project highlights his ambition for continuous learning and crafting seamless web applications using modern technologies.
 
 ## Project Overview
 
@@ -13,7 +15,6 @@ This portfolio website serves as a professional platform to showcase Danial’s 
 - [Installation](#installation)
 - [Development Scripts](#development-scripts)
 - [Folder Structure](#folder-structure)
-- [License](#license)
 
 ## Features
 
