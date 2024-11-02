@@ -44,11 +44,11 @@ To set up this project locally, follow these steps:
    cd danielo-portfolio
 
 2. **Install dependencies**:
-   ```bash
+   ```tsx
    yarn
 
 3. **Run the development server**:
-   ```bash
+   ```tsx
    yarn dev
 
 4. **Open http://localhost:3000 in your browser to see the project**.
@@ -67,3 +67,7 @@ Here are some helpful scripts to assist in the development and maintenance of th
 ---
 
 Feel free to reach out with any questions or feedback on the project. Enjoy exploring!
+
+<h1 align="center">
+  <img src="public/logos/Danial-Khakbaz-Logo.webp" alt="Danial Khakbaz's logo" width="200">
+</h1>
