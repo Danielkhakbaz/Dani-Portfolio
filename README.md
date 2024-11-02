@@ -65,10 +65,3 @@ Here are some helpful scripts to assist in the development and maintenance of th
 ```check-prettier```: Checks the code format without making changes. <br/>
 
 ---
-
-<h1 align="center">
-   Enjoy!
-   <br />
-   <br />
-  <img src="public/logos/Danial-Khakbaz-Logo.webp" alt="Danial Khakbaz's logo" width="50">
-</h1>
