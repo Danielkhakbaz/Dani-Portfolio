@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Danial Khakbaz's Portfolio
 
-## Getting Started
+Danial Khakbaz's portfolio built with [Next.js](https://nextjs.org/), showcasing his skills as a Front-end developer with a journey toward becoming a Full-stack developer by the end of 2024. This project highlights his ambition for continuous learning and crafting seamless web applications using modern technologies.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This portfolio website serves as a professional platform to showcase Danial’s work, skills, and personal philosophy on balanced living. It is optimized for performance and utilizes several popular tools and libraries for a smooth, interactive user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Development Scripts](#development-scripts)
+- [Folder Structure](#folder-structure)
+- [License](#license)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **Responsive Design**: Fully responsive layout with smooth animations.
+- **Interactive Animations**: Powered by Framer Motion.
+- **MDX Support**: Easily integrates Markdown with React components.
+- **Theme Customization**: Leveraging Chakra UI for theme flexibility.
+- **View Transitions**: Provides smooth transitions between pages.
+- **Form Integration**: Contact form connected to EmailJS for direct communication.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[Next.js](https://nextjs.org/)** - React framework for server-side rendering and static website generation.
+- **[React](https://reactjs.org/)** - JavaScript library for building user interfaces.
+- **[Chakra UI](https://chakra-ui.com/)** - Component library for building accessible React applications.
+- **[Framer Motion](https://www.framer.com/motion/)** - Animation library for React.
+- **[EmailJS](https://www.emailjs.com/)** - Service to send emails directly from the client-side.
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with static typing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+To set up this project locally, follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/danielo-portfolio.git
+   cd danielo-portfolio
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies**:
+   ```yarn
+
+3. **Run the development server**:
+   ```yarn dev
+
+4. **Open http://localhost:3000 in your browser to see the project**.
+
+## Development Scripts
+
+Here are some helpful scripts to assist in the development and maintenance of this project:
+
+```dev```: Runs the app in development mode.
+```build```: Compiles the app for production.
+```start```: Starts the production server.
+```lint```: Lints and fixes files using ESLint.
+```fix```: Formats files using Prettier.
+```check-prettier```: Checks the code format without making changes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+---
+
+Feel free to reach out with any questions or feedback on the project. Enjoy exploring!
