@@ -1,16 +1,23 @@
 {
-  "name": "",
+  "name": "danielo-portfolio",
   "version": "0.1.0",
   "private": true,
   "author": "Danial Khakbaz<danialkhakbaz.dk@gmail.com>",
-  "description": "",
-  "keywords": [],
+  "description": "Danial Khakbaz's Portfolio built with next.js",
+  "keywords": [
+    "portfolio",
+    "danial khakbaz",
+    "danial",
+    "khakbaz",
+    "Front-end Developer",
+    "Web Developer",
+    "Software Developer"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "eslint": "eslint --fix .",
+    "lint": "eslint --fix .",
     "fix": "prettier --write .",
     "upgrade": "yarn upgrade-interactive --latest",
     "knip": "npx knip",
@@ -23,6 +30,13 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "15.0.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -31,13 +45,15 @@
     "eslint-plugin-boundaries": "^5.0.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-project-structure": "^3.11.0",
+    "framer-motion": "^11.9.0",
     "husky": "^8.0.0",
+    "moment": "^2.30.1",
     "next-view-transitions": "^0.3.4",
     "postcss": "^8",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
+    "react-icons": "^5.3.0",
     "sharp": "^0.33.5",
-    "tailwindcss": "^3.4.1",
+    "sugar-high": "^0.7.1",
     "typescript": "^5"
   }
 }

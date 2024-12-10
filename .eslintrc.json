@@ -1,20 +1,27 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
-  "plugins": ["boundaries"],
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "react", "@next/next", "boundaries"],
   "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "ignorePatterns": [
+      ".husky/**/*",
+      ".next/**/*",
+      "node_modules/**/*",
+      ".vscode/**/*"
+    ],
     "boundaries/include": ["**/*"],
     "boundaries/elements": [
       {
         "mode": "full",
         "type": "shared",
-        "pattern": [
-          "api/**/*",
-          "components/**/*",
-          "lib/**/*",
-          "hooks/**/*",
-          "utils/**/*",
-          "styles/**/*"
-        ]
+        "pattern": ["shared/**/*", "public/**/*"]
       },
       {
         "mode": "full",
@@ -35,6 +42,33 @@
       }
     ]
   },
+  "overrides": [
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "globals": {
+        "serviceworker": true,
+        "browser": true
+      },
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "error",
+        "react/jsx-no-unused-vars": "off",
+        "react/react-in-jsx-scope": "off",
+        "spaced-comment": ["error", "always", { "markers": ["/"] }],
+        "new-cap": "off"
+      }
+    },
+    {
+      "files": ["**/*"]
+    }
+  ],
   "rules": {
     "boundaries/no-unknown": ["error"],
     "boundaries/no-unknown-files": ["error"],

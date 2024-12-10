@@ -1,4 +1,6 @@
-# Next.js Template
+# Danial Khakbaz's Portfolio
+
+<a href="https://danieloo.vercel.app/" target="_blank"><img src="public/images/projects/portfolio/screen-shot.png" alt="The screen-shot of the daniel's portfolio" /></a>
 
 Danial Khakbaz's portfolio built with [Next.js](https://nextjs.org/), showcasing his skills as a Front-end developer with a journey toward becoming a Full-stack developer. This project highlights his ambition for continuous learning and crafting seamless web applications using modern technologies.
 
@@ -12,24 +14,60 @@ This portfolio website serves as a professional platform to showcase Danial’s 
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Development Scripts](#development-scripts)
+- [Folder Structure](#folder-structure)
 
 ## Features
 
 - **Responsive Design**: Fully responsive layout with smooth animations.
-- **Interactive Animations**: Seamless transitions powered by Next View Transition.
-- **Tailwind CSS Integration**: Utility-first CSS framework for rapid UI development.
-- **TypeScript Support**: Enhanced type safety and development experience.
-- **Image Optimization**: Efficient image handling with Sharp for performance.
-- **Linting and Formatting**: Code quality maintained with ESLint and Prettier.
+- **Interactive Animations**: Powered by Framer Motion.
+- **MDX Support**: Easily integrates Markdown with React components.
+- **Theme Customization**: Leveraging Chakra UI for theme flexibility.
+- **View Transitions**: Provides smooth transitions between pages.
+- **Form Integration**: Contact form connected to EmailJS for direct communication.
 
 ## Technologies Used
 
 - **[Next.js](https://nextjs.org/)** - React framework for server-side rendering and static website generation.
 - **[React](https://reactjs.org/)** - JavaScript library for building user interfaces.
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid UI development.
+- **[Chakra UI](https://chakra-ui.com/)** - Component library for building accessible React applications.
+- **[Framer Motion](https://www.framer.com/motion/)** - Animation library for React.
+- **[EmailJS](https://www.emailjs.com/)** - Service to send emails directly from the client-side.
 - **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with static typing.
-- **[Sharp](https://sharp.pixelplumbing.com/)** - High-performance image processing.
-- **[Knip](https://knip.dev/)** - Tool for managing your Next.js project's file and folder structure.
+
+## Folder Structure
+
+```plaintext
+danielo-portfolio/
+├── app/                        # Source files for the main app logic
+│   ├── blog/                   # Blog section (page and components for blog posts)
+│   ├── contact/                # Contact section (page and components for contact forms)
+│   ├── experiences/            # Experiences section (page and components for work experience)
+│   ├── projects/               # Projects section (page and components for showcasing projects)
+│   ├── error.tsx               # Custom error page
+│   ├── favicon.ico             # Favicon for the website
+│   ├── layout.tsx              # Root layout component for setting up global layouts
+│   ├── not-found.tsx           # Custom 404 page for handling not-found routes
+│   └── page.tsx                # Main landing page component
+│
+├── components/                 # Reusable UI components
+│   ├── layouts/                # Layout components for structuring pages
+│   └── ui/                     # Small, reusable UI components like buttons, inputs, etc.
+│
+├── lib/                        # Utility libraries and application logic
+│   ├── constants/              # Constants and configurations used throughout the app
+│   └── providers/              # Context providers for managing global state and data
+│
+├── styles/                     # Global and theme-specific styling files
+│   ├── font/                   # Font files or font-related configurations
+│   ├── theme/                  # Theme settings for design consistency (colors, typography, etc.)
+│   └── globals.css             # Global CSS applied to the entire application
+│
+├── .eslintrc.json              # ESLint configuration for linting and code standards
+├── .prettierrc                 # Prettier configuration for consistent code formatting
+├── next.config.js              # Next.js configuration settings
+├── package.json                # Project metadata, scripts, and dependencies
+└── README.md                   # Documentation file explaining the project setup and usage
+```
 
 ## Installation
 
@@ -38,32 +76,33 @@ To set up this project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/Danielkhakbaz/Nextjs-Template
-   cd daniel-portfolio
+   git clone https://github.com/Danielkhakbaz/Danielo-Portfolio
+   cd danielo-portfolio
+
    ```
 
 2. **Install dependencies**:
 
-   ```bash
-   yarn
+   ```tsx
+   yarn;
    ```
 
 3. **Run the development server**:
 
-   ```bash
+   ```tsx
    yarn dev
+
    ```
 
-4. **Open** [http://localhost:3000](http://localhost:3000) **in your browser to see the project**.
+4. **Open http://localhost:3000 in your browser to see the project**.
 
 ## Development Scripts
 
 Here are some helpful scripts to assist in the development and maintenance of this project:
 
-- `dev`: Runs the app in development mode.
-- `build`: Compiles the app for production.
-- `start`: Starts the production server.
-- `lint`: Lints and fixes files using ESLint.
-- `fix`: Formats files using Prettier.
-- `knip`: Analyzes the project structure and provides suggestions for improvement.
-- `check-prettier`: Checks the code format without making changes.
+`dev`: Runs the app in development mode. <br/><br/>
+`build`: Compiles the app for production. <br/><br/>
+`start`: Starts the production server. <br/><br/>
+`lint`: Lints and fixes files using ESLint. <br/><br/>
+`fix`: Formats files using Prettier. <br/><br/>
+`check-prettier`: Checks the code format without making changes. <br/>

@@ -1,6 +1,9 @@
 "use client";
 
 import { Link } from "next-view-transitions";
+import { Flex, Heading, Code, Text, Button } from "@chakra-ui/react";
+import { FaHome } from "react-icons/fa";
+import { FaArrowRotateLeft } from "react-icons/fa6";
 
 type ErrorProps = {
   error: Error;
@@ -9,27 +12,34 @@ type ErrorProps = {
 
 const Error = ({ error, reset }: ErrorProps) => {
   return (
-    <div>
-      <div>
-        <h2>THERE IS A PROBLEM!</h2>
-        <pre>{error.message}</pre>
-        <p>
+    <Flex height="80vh" justifyContent="center" alignItems="center">
+      <Flex flexDirection="column" alignItems="center" gap={12}>
+        <Heading size="2xl">THERE IS A PROBLEM!</Heading>
+        <Code colorScheme="red" width="full" textAlign="center">
+          {error.message}
+        </Code>
+        <Text fontWeight="semibold" fontSize="xl">
           Please try again. If the problem persists, fell free to contact me!
-        </p>
-        <div>
-          <button onClick={reset}>
+        </Text>
+        <Flex justifyContent="center" alignItems="center" gap={4}>
+          <Button
+            colorScheme="purple"
+            display="flex"
+            alignItems="center"
+            gap={2}
+            onClick={reset}
+          >
             Try Again
-            {/* <FaArrowRotateLeft /> */}
-          </button>
+            <FaArrowRotateLeft />
+          </Button>
           <Link href="/">
-            <button>
-              Back to the Home
-              {/* <FaHome fontSize={18} /> */}
-            </button>
+            <Button colorScheme="yellow" gap={2}>
+              Back to the Home <FaHome fontSize={18} />
+            </Button>
           </Link>
-        </div>
-      </div>
-    </div>
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
 
