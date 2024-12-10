@@ -1,0 +1,62 @@
+import Image from "next/image";
+import BlogNav from "@/features/blog/components/nav";
+import { Box } from "@chakra-ui/react";
+
+export const metadata = {
+  title: "Blog | Delete directories on Mac",
+  alternates: {
+    canonical:
+      "https://danieloo.vercel.app/blog/content/delete-directories-on-mac",
+  },
+};
+
+<BlogNav date="February 09, 2024" neededTime={2}>
+  # Delete directories on Mac
+
+  <Image
+    width="1000"
+    height="100"
+    src="/images/blog/delete-directories-on-mac.webp"
+    alt="Delete directories on Mac's Image"
+    rel="preload"
+    priority
+    fetchPriority="high"
+    placeholder="blur"
+    blurDataURL="|HI~q{-M=|xSvw$+OZkrIpyvrrrV%2$cVsNgxtJDMTg3o}M{NMtQjERPs.S=X+E5oJXWR*xAaj$dTio|NeNdNho|nhRQs,aPRRoeWYbba{WEj=WFMUjFWXt8awWCozt6n$NXt6ozR-Rka#s:aeocx-R*axWZW=WAV[s+n,"
+    style={{
+      marginBottom: 8,
+    }}
+  />
+</BlogNav>
+
+**Use the below command:**
+
+<Box marginBottom={4}>`rm -rf lampp`</Box>
+
+It deletes all files and folders contained in the `lampp` directory.
+
+**In case user doesn’t have the permission to delete the folder:**
+
+Add `sudo` at the beginning of the command:
+
+<Box marginBottom={4}>`sudo rm -rf folderName`</Box>
+
+Note: This assumes you are already at the same level in the terminal as the folder you want to delete. If not:
+
+<Box marginBottom={4}>`sudo rm -r /path/to/folderName`</Box>
+
+FYI: You can use the following options:
+
+- `-f` = to ignore non-existent files and never prompt
+- `-r` = to remove directories and their contents recursively
+- `-v` = to display what is being done
+
+<Box marginY={4}>
+
+---
+
+</Box>
+
+## Sources
+
+- [Ask Ubuntu](https://askubuntu.com/questions/217893/how-to-delete-a-non-empty-directory-in-terminal)

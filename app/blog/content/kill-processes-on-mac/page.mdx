@@ -1,0 +1,46 @@
+import Image from "next/image";
+import BlogNav from "@/features/blog/components/nav";
+import { Box } from "@chakra-ui/react";
+
+export const metadata = {
+  title: "Blog | Kill processes on Mac",
+  alternates: {
+    canonical: "https://danieloo.vercel.app/blog/content/kill-processes-on-mac",
+  },
+};
+
+<BlogNav date="February 13, 2024" neededTime={1}>
+  # How to kill process on MacOS
+
+  <Image
+    width="1000"
+    height="100"
+    src="/images/blog/kill-processes-on-mac.webp"
+    alt="Kill processes on Mac's Image"
+    rel="preload"
+    priority
+    fetchPriority="high"
+    placeholder="blur"
+    blurDataURL="|DSY?bMx?a.8_No#4nR5nOnQoffkRjRjRjt7t7tQ_3x[IUIBDini?bo}X8NFRjoft8%Mt7RjM{M{R%e.xuoztQR*IUs:xH?uofV[a{RjWVaeofjb%zbFRQn+e.s:s:RjM{?vkCRjjZRPWBofkCbFf+j[ofWUkBkCRjoMoL"
+    style={{
+      marginBottom: 8,
+    }}
+  />
+</BlogNav>
+
+1. You can try `netstat`
+   `netstat -vanp tcp | grep 3000`
+
+2. For **macOS El Capitan** and newer (or if your netstat
+   doesn&apos;t support `-p`), use `lsof`
+   `lsof -i tcp:3000`
+
+<Box marginY={4}>
+
+---
+
+</Box>
+
+## Sources
+
+- [Stack Overflow](https://stackoverflow.com/questions/3855127/find-and-kill-process-locking-port-3000-on-mac)
