@@ -153,7 +153,7 @@ const Contact = () => {
               onChange={checkFormValidity}
             />
             <FormHelperText color="#CBD5D9">
-              I`&apos;`ll never share your email.
+              I&apos;ll never share your email.
             </FormHelperText>
           </FormControl>
         </FadeUp>
@@ -177,7 +177,7 @@ const Contact = () => {
                   <option value="">Select object...</option>
                   <option value="Work Opportunity">Work Opportunity</option>
                   <option value="Projects that I'd loved to discuss about">
-                    Projects that I`&apos;`d loved to discuss about
+                    Projects that I&apos;d loved to discuss about
                   </option>
                   <option value="Others">Others</option>
                 </Input>
