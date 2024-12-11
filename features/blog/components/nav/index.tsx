@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
-import CopyClipboard from "@/features/blog/components/copy-clipboard";
+import CopyClipboard from "@/features/blog/components/nav/copy-clipboard";
 import DanialKhakbazMemoji from "@/public/images/memojis/danial-khakbaz-memoji.png";
 import { FaArrowLeft, FaRegClock } from "react-icons/fa6";
 import { Flex, Button, Text } from "@chakra-ui/react";
