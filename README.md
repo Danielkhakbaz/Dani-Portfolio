@@ -60,7 +60,7 @@ danielo-portfolio/
 │   │
 │   ├── contact/                # Contact section (components for contact forms)
 │   │   ├── components/         # Components related to contact
-│   │    ── constants/          # Constants related to contact
+│   │   └── constants/          # Constants related to contact
 │   │
 │   ├── experiences/            # Experiences section (components for work experience)
 │   │   ├── components/         # Components related to experiences
