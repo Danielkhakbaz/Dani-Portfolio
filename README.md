@@ -38,29 +38,47 @@ This portfolio website serves as a professional platform to showcase Danial’s 
 
 ```plaintext
 danielo-portfolio/
-├── app/                        # Source files for the main app logic
-│   ├── blog/                   # Blog section (page and components for blog posts)
-│   ├── contact/                # Contact section (page and components for contact forms)
-│   ├── experiences/            # Experiences section (page and components for work experience)
-│   ├── projects/               # Projects section (page and components for showcasing projects)
+├── app/                        # Source files for app pages(contains routing system)
+│   ├── blog/                   # Blog section (page for blog posts)
+│   ├── contact/                # Contact section (page for contact forms)
+│   ├── experiences/            # Experiences section (page for work experience)
+│   ├── projects/               # Projects section (page for showcasing projects)
 │   ├── error.tsx               # Custom error page
 │   ├── favicon.ico             # Favicon for the website
 │   ├── layout.tsx              # Root layout component for setting up global layouts
 │   ├── not-found.tsx           # Custom 404 page for handling not-found routes
 │   └── page.tsx                # Main landing page component
 │
-├── components/                 # Reusable UI components
-│   ├── layouts/                # Layout components for structuring pages
-│   └── ui/                     # Small, reusable UI components like buttons, inputs, etc.
+├── features/                   # Seperated pages with all their parts
+│   ├── home/                   # Home section (components for home posts)
+│   │   ├── components/         # Components related to home
+│   │   └── constants/          # Constants related to home
+│   │
+│   ├── blog/                   # Blog section (components for blog posts)
+│   │   ├── components/         # Components related to blog
+│   │   └── constants/          # Constants related to blog
+│   │
+│   ├── contact/                # Contact section (components for contact forms)
+│   │   ├── components/         # Components related to contact
+│   │    ── constants/          # Constants related to contact
+│   │
+│   ├── experiences/            # Experiences section (components for work experience)
+│   │   ├── components/         # Components related to experiences
+│   │   └── constants/          # Constants related to experiences
+│   │
+│   └── projects/               # Projects section (components for showcasing projects)
+│       ├── components/         # Components related to projects
+│       └── constants/          # Constants related to projects
 │
-├── lib/                        # Utility libraries and application logic
+├── shared/                     # All the pieces of codes that used throughout the app
+│   ├── components/             # Components used throughout the app
 │   ├── constants/              # Constants and configurations used throughout the app
-│   └── providers/              # Context providers for managing global state and data
-│
-├── styles/                     # Global and theme-specific styling files
-│   ├── font/                   # Font files or font-related configurations
-│   ├── theme/                  # Theme settings for design consistency (colors, typography, etc.)
-│   └── globals.css             # Global CSS applied to the entire application
+│   ├── providers/              # Context providers for managing global state and data
+│   ├── utils/                  # Utility function and components used throughout the app
+│   └── styles/                 # Global and theme-specific styling files
+│       ├── fonts/                   # Font files or font-related configurations
+│       ├── theme/                  # Theme settings for design consistency (colors, typography, etc.)
+│       └── globals.css             # Global CSS applied to the entire application
 │
 ├── .eslintrc.json              # ESLint configuration for linting and code standards
 ├── .prettierrc                 # Prettier configuration for consistent code formatting
