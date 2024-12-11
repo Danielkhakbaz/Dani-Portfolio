@@ -102,7 +102,7 @@ To set up this project locally, follow these steps:
 2. **Install dependencies**:
 
    ```tsx
-   yarn
+   yarn;
    ```
 
 3. **Run the development server**:
